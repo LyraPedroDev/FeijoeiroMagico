@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Missão e os Fundamentos Pedagógicos do Feijoeiro Mágico - Infantário S. Vicente em Alfena. Conheça a Feijãogogia e o nosso compromisso educativo.">
+    <meta name="keywords" content="feijoeiro magico missao, feijaogogia, pedagogia infantil alfena, infantario sao vicente, creche alfena">
+    <meta name="author" content="Associação Feijoeiro Mágico">
+    <title>A Nossa Missão | Feijoeiro Mágico</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon using SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Accessibility skip-link -->
+    <a href="#conteudo-principal" class="skip-link">Saltar para o conteúdo principal</a>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" aria-label="Feijoeiro Mágico - Página Inicial">
+                <!-- SVG Beanstalk Logo -->
+                <svg class="logo-svg" viewBox="0 0 200 60" width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(10, 5)">
+                        <!-- Beanstalk Stem -->
+                        <path d="M20,45 Q25,25 20,5" fill="none" stroke="var(--accent-leaf)" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Leaves -->
+                        <path d="M22,30 Q35,25 32,15 Q20,20 22,30" fill="var(--accent-leaf)" />
+                        <path d="M18,20 Q5,15 8,5 Q20,10 18,20" fill="var(--primary-green)" opacity="0.8" />
+                        <!-- Golden Sun -->
+                        <circle cx="20" cy="5" r="4" fill="var(--sun-yellow)" />
+                    </g>
+                    <!-- Text -->
+                    <text x="50" y="32" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" fill="var(--primary-green)">Feijoeiro</text>
+                    <text x="50" y="48" font-family="'Outfit', sans-serif" font-weight="600" font-size="14" fill="var(--accent-leaf)" letter-spacing="1">MÁGICO</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                            Instituição <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-label="Submenu Instituição">
+                            <li><a href="missao.html">Missão</a></li>
+                            <li><a href="horario.html">Horário de Funcionamento</a></li>
+                            <li><a href="sinergias.html">Sinergias</a></li>
+                            <li><a href="regulamento.html">Regulamento Interno</a></li>
+                            <li><a href="contingencia.html">Plano de Contingência</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                    <li><a href="index.html#pais">Área dos Pais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html#contactos" class="btn btn-leaf btn-small" id="header-cta">Agendar Visita</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Menu Móvel" aria-hidden="true">
+        <ul>
+            <li class="nav-item-dropdown-mobile">
+                <button class="dropdown-trigger-mobile" aria-haspopup="true" aria-expanded="false">
+                    Instituição <span class="dropdown-arrow-mobile" aria-hidden="true">▼</span>
+                </button>
+                <ul class="dropdown-menu-mobile" aria-label="Submenu Instituição Móvel">
+                    <li><a href="missao.html">Missão</a></li>
+                    <li><a href="horario.html">Horário de Funcionamento</a></li>
+                    <li><a href="sinergias.html">Sinergias</a></li>
+                    <li><a href="regulamento.html">Regulamento Interno</a></li>
+                    <li><a href="contingencia.html">Plano de Contingência</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="comunidade.html">Comunidade</a></li>
+            <li><a href="index.html#pais">Área dos Pais</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="index.html#contactos" class="btn btn-leaf btn-mobile-cta">Agendar Visita</a></li>
+        </ul>
+        <div class="mobile-nav-decor">
+            <svg viewBox="0 0 100 100" class="mobile-decor-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 Q50,40 100,80 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.3"></path>
+                <path d="M0,90 Q50,70 100,90 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.5"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="conteudo-principal" style="padding-top: 120px;">
+        <section class="section animate-scroll active" style="padding: 80px 0;">
+            <div class="container" style="max-width: 800px; margin: 0 auto;">
+                
+                <!-- Tagline & Heading -->
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <span class="hero-tagline" style="display: inline-block;">🌱 A Nossa Filosofia</span>
+                    <h1 class="hero-title" style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-top: 16px; margin-bottom: 24px; line-height: 1.2;">
+                        A Nossa <span class="highlight">Missão</span>
+                    </h1>
+                </div>
+
+                <!-- Mission Content Layout -->
+                <div class="mission-page-content" style="font-size: 1.1rem; line-height: 1.8; color: var(--text-main); display: flex; flex-direction: column; gap: 32px;">
+                    
+                    <!-- Intro Card -->
+                    <div style="background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-md); border: 1px solid rgba(47, 117, 75, 0.05); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: -10px; right: -10px; font-size: 6rem; opacity: 0.05; pointer-events: none; user-select: none;">🏰</div>
+                        <p style="font-weight: 600; font-size: 1.25rem; color: var(--primary-green); margin-bottom: 20px;">
+                            A Associação Feijoeiro Mágico é uma entidade educativa particular, criada em 2014, com resposta nas valências de Creche, Jardim de Infância, OTL e Apoio à Família.
+                        </p>
+                        <p>
+                            A Associação Feijoeiro Mágico nasceu de uma enorme vontade de formar e educar cidadãos livres, pensantes, responsáveis, solidários… membros ativos de uma sociedade que todos desejamos mais justa, verdadeira, feliz e cativante; permitindo-lhes a aquisição de competências, conhecimentos, autoestima, bom senso e valores que os ajudem a criar laços sinceros de amizade e a alcançar sucesso na vida sem desistir de sonhar!
+                        </p>
+                    </div>
+
+                    <!-- Pedagogias Combinadas Card (Feijãogogia) -->
+                    <div style="background: linear-gradient(135deg, var(--sky-blue) 0%, var(--white) 100%); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-sm); border: 1px solid rgba(47, 117, 75, 0.05);">
+                        <h2 style="font-size: 1.6rem; color: var(--forest); margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                            <span>🎯</span> As Nossas Linhas Orientadoras
+                        </h2>
+                        <p style="margin-bottom: 20px;">
+                            A nossa Instituição rege-se por fundamentos e linhas orientadoras de diferentes Pedagogias combinadas, tais como <strong>Waldorf, Reggio Emilia, João de Deus, Movimento Escola Moderna e Montessori</strong>. 
+                        </p>
+                        <p style="font-style: italic; background: rgba(255, 255, 255, 0.7); padding: 20px 24px; border-left: 5px solid var(--accent-leaf); border-radius: 4px 12px 12px 4px; color: var(--text-main); font-weight: 500;">
+                            "Laçando as mais-valias que reconhecemos nestes diferentes métodos pedagógicos e valorizando sempre as características individuais de cada criança ao longo do desenvolvimento das suas capacidades físico-motoras, emocionais, criativas e cognitivas, construímos os dias de forma gira e seguimos um rumo muito próprio… o da nossa Pedagogia! – <strong>Feijãogogia</strong>"
+                        </p>
+                    </div>
+
+                    <!-- Castelo Section -->
+                    <div style="background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-md); border: 1px solid rgba(47, 117, 75, 0.05);">
+                        <p>
+                            No nosso Castelo estimulamos o gosto pela vida, a imaginação, o raciocínio lógico, a criatividade, o espírito de cooperação e a entreajuda. Queremos munir os nossos alunos com a vontade de sorrir e fazer sorrir, preparando-os o melhor possível para a realidade atual e consciencializando-os que os bons sentimentos cativam-se… e retornam sempre para quem os partilha.
+                        </p>
+                    </div>
+
+                    <!-- Premissas Section -->
+                    <div style="background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-md); border: 1px solid rgba(47, 117, 75, 0.05);">
+                        <h2 style="font-size: 1.6rem; color: var(--forest); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <span>🌿</span> Premissas da Feijãogogia
+                        </h2>
+                        <p style="margin-bottom: 24px;">
+                            A <strong>Feijãogogia</strong> é uma Pedagogia Lúdico-Educativa baseada na fantasia dos Contos, que se foca na estimulação de competências abrangidas em diferentes áreas de desenvolvimento e assume várias premissas:
+                        </p>
+                        
+                        <ul class="premissas-list" style="display: flex; flex-direction: column; gap: 18px; list-style: none; padding-left: 0;">
+                            <li style="padding-left: 32px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-leaf); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                Estimular o desenvolvimento físico, a coordenação motora, o desenvolvimento sensorial e cognitivo, a função simbólica, a inteligência emocional, a linguagem, a autonomia, a capacidade de raciocínio, a criatividade, a autoestima e o sentido de responsabilidade associado ao de liberdade;
+                            </li>
+                            <li style="padding-left: 32px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-leaf); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                Despertar a curiosidade e o pensamento crítico construtivo;
+                            </li>
+                            <li style="padding-left: 32px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-leaf); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                Promover tempo de qualidade para as crianças brincarem, partilharem e se descobrirem emocionalmente;
+                            </li>
+                            <li style="padding-left: 32px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-leaf); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                Desenvolver a expressão e a comunicação libertas de preconceitos;
+                            </li>
+                            <li style="padding-left: 32px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-leaf); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                Colaborar estreitamente com a família, numa partilha de cuidados e responsabilidades em todo o processo evolutivo da criança, promovendo a saúde e o bem-estar global;
+                            </li>
+                            <li style="padding-left: 32px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-leaf); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                Estimular o convívio salutar com outras crianças, diferentes culturas e formas distintas de arte, como meios de integração social, potenciando harmoniosamente a construção da personalidade;
+                            </li>
+                            <li style="padding-left: 32px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-leaf); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                Assegurar os cuidados de higiene e de alimentação adequados ao desenvolvimento de cada criança;
+                            </li>
+                            <li style="padding-left: 32px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-leaf); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                Colaborar no despiste precoce de qualquer inadaptação ou deficiência, dedicando tempo e recursos para encaminhar e acompanhar adequadamente todas as situações detetadas;
+                            </li>
+                            <li style="padding-left: 32px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-leaf); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                Contribuir para a formação de bons alunos apostando, numa primeira instância, na formação de bons seres humanos, sempre numa perspetiva de Educação para a Cidadania e de desenvolvimento de algo fundamental… a estabilidade emocional e o bom senso, que permitem sentir autoestima e gerar felicidade.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Homologação / Fiscalização -->
+                    <div style="background: linear-gradient(135deg, rgba(47, 117, 75, 0.03) 0%, rgba(76, 184, 119, 0.05) 100%); padding: 40px; border-radius: 24px; border: 1px solid rgba(47, 117, 75, 0.08); text-align: center;">
+                        <h3 style="font-size: 1.25rem; color: var(--primary-green); margin-bottom: 16px; font-family: var(--font-heading); font-weight: 700;">
+                            🛡️ Entidades Homologadoras e Tutelares
+                        </h3>
+                        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; max-width: 680px; margin: 0 auto;">
+                            A Associação Feijoeiro Mágico presta serviços lúdico-educativos homologados, tutelados e fiscalizados pelas seguintes entidades: <strong>Direção-Geral dos Estabelecimentos Escolares, Direção Regional de Educação do Norte, Segurança Social, Câmara Municipal de Valongo, Serviço Nacional de Bombeiros, Proteção Civil e Delegação de Saúde</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Back to Home Button -->
+                    <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
+                        <a href="index.html" class="btn btn-leaf btn-large">🌱 Voltar à Página Principal</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-curved-background">
+            <svg class="footer-silhouette-svg" viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,50 Q200,80 400,60 T800,50 T1200,70 T1440,60 L1440,100 L0,100 Z" fill="var(--forest-dark)"/>
+            </svg>
+        </div>
+
+        <div class="container footer-content-container">
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">🌱 Feijoeiro Mágico</div>
+                    <p class="footer-tagline">Uma comunidade acolhedora sob gestão dedicada da Associação Feijoeiro Mágico no histórico Infantário S. Vicente de Alfena. Ajudamos a sonhar e a germinar o saber ecológico.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook" class="social-icon-btn">📘</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="social-icon-btn">📸</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Youtube" class="social-icon-btn">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html#projeto" class="footer-link">Projeto Pedagógico</a></li>
+                        <li><a href="servicos.html" class="footer-link">Serviços</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Ementas da Semana</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Cofre de Documentos</a></li>
+                        <li><a href="contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-legal-col">
+                    <h4>Legislação & Informação</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Políticas de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Política de Cookies</a></li>
+                        <li><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" class="footer-link">Livro de Reclamações</a></li>
+                        <li><a href="#" class="footer-link">Ficha Técnica da Licença</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 Associação Feijoeiro Mágico (Infantário S. Vicente). Todos os direitos reservados.</p>
+                <p class="footer-credit">Desenhado com 💚 para as nossas queridas crianças.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>

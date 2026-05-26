@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Associação Feijoeiro Mágico - Infantário S. Vicente em Alfena. Reconstrução premium com valências de Berçário, Creche, Jardim de Infância e CATL sob um projeto pedagógico centrado na ecologia e no afeto.">
+    <meta name="keywords" content="feijoeiro magico, infantario sao vicente, creche alfena, jardim infancia valongo, catl alfena, apoio de estudo alfena, ementas infantario">
+    <meta name="author" content="Associação Feijoeiro Mágico">
+    <title>Feijoeiro Mágico | Creche, Jardim de Infância & CATL em Alfena</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon using SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Accessibility skip-link -->
+    <a href="#conteudo-principal" class="skip-link">Saltar para o conteúdo principal</a>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo-link" aria-label="Feijoeiro Mágico - Página Inicial">
+                <!-- SVG Beanstalk Logo -->
+                <svg class="logo-svg" viewBox="0 0 200 60" width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(10, 5)">
+                        <!-- Beanstalk Stem -->
+                        <path d="M20,45 Q25,25 20,5" fill="none" stroke="var(--accent-leaf)" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Leaves -->
+                        <path d="M22,30 Q35,25 32,15 Q20,20 22,30" fill="var(--accent-leaf)" />
+                        <path d="M18,20 Q5,15 8,5 Q20,10 18,20" fill="var(--primary-green)" opacity="0.8" />
+                        <!-- Golden Sun -->
+                        <circle cx="20" cy="5" r="4" fill="var(--sun-yellow)" />
+                    </g>
+                    <!-- Text -->
+                    <text x="50" y="32" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" fill="var(--primary-green)">Feijoeiro</text>
+                    <text x="50" y="48" font-family="'Outfit', sans-serif" font-weight="600" font-size="14" fill="var(--accent-leaf)" letter-spacing="1">MÁGICO</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                            Instituição <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-label="Submenu Instituição">
+                            <li><a href="missao.html">Missão</a></li>
+                            <li><a href="horario.html">Horário de Funcionamento</a></li>
+                            <li><a href="sinergias.html">Sinergias</a></li>
+                            <li><a href="regulamento.html">Regulamento Interno</a></li>
+                            <li><a href="contingencia.html">Plano de Contingência</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#projeto">Projeto Pedagógico</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                    <li><a href="#pais">Área dos Pais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#contactos" class="btn btn-leaf btn-small" id="header-cta">Agendar Visita</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Menu Móvel" aria-hidden="true">
+        <ul>
+            <li class="nav-item-dropdown-mobile">
+                <button class="dropdown-trigger-mobile" aria-haspopup="true" aria-expanded="false">
+                    Instituição <span class="dropdown-arrow-mobile" aria-hidden="true">▼</span>
+                </button>
+                <ul class="dropdown-menu-mobile" aria-label="Submenu Instituição Móvel">
+                    <li><a href="missao.html">Missão</a></li>
+                    <li><a href="horario.html">Horário de Funcionamento</a></li>
+                    <li><a href="sinergias.html">Sinergias</a></li>
+                    <li><a href="regulamento.html">Regulamento Interno</a></li>
+                    <li><a href="contingencia.html">Plano de Contingência</a></li>
+                </ul>
+            </li>
+            <li><a href="#projeto">Projeto Pedagógico</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="comunidade.html">Comunidade</a></li>
+            <li><a href="#pais">Área dos Pais</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="#contactos" class="btn btn-leaf btn-mobile-cta">Agendar Visita</a></li>
+        </ul>
+        <div class="mobile-nav-decor">
+            <svg viewBox="0 0 100 100" class="mobile-decor-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 Q50,40 100,80 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.3"></path>
+                <path d="M0,90 Q50,70 100,90 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.5"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="conteudo-principal">
+
+        <!-- Hero Section (The Canopy) -->
+        <section class="hero-section">
+            <div class="hero-bg-vines">
+                <!-- Interactive Beanstalk SVG: stem path grows on scroll via stroke-dasharray in JS -->
+                <svg class="beanstalk-grow-svg" viewBox="0 0 150 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="growing-beanstalk-stem" d="M30,800 C80,680 20,550 90,400 C160,250 40,120 120,0" stroke="var(--accent-leaf)" stroke-width="8" stroke-linecap="round"/>
+                    <!-- Interactive Leaf nodes sprouting out, fading in when scrolled past -->
+                    <path class="growing-leaf" data-scroll="600" d="M48,680 Q10,660 20,630 C38,640 40,665 48,680 Z" fill="var(--accent-leaf)" />
+                    <path class="growing-leaf" data-scroll="450" d="M68,480 Q120,460 108,430 C90,440 85,465 68,480 Z" fill="var(--primary-green)" />
+                    <path class="growing-leaf" data-scroll="300" d="M92,300 Q130,280 120,250 C100,260 100,285 92,300 Z" fill="var(--accent-leaf)" />
+                    <path class="growing-leaf" data-scroll="150" d="M72,160 Q30,140 42,110 C60,120 60,145 72,160 Z" fill="var(--sun-yellow)" />
+                </svg>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-tagline">🌱 Infantário S. Vicente (Alfena)</span>
+                    <h1 class="hero-title">Onde os pequenos sonhos <span class="highlight">crescem bem alto</span></h1>
+                    <p class="hero-subtitle">
+                        Aliando o carinho de uma pedagogia de afeto com o rigor de uma educação focada no ambiente e sustentabilidade ativa no Infantário S. Vicente.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#contactos" class="btn btn-leaf btn-large">Agendar uma Visita</a>
+                        <a href="servicos.html" class="btn btn-outline-leaf btn-large">Explorar Serviços</a>
+                    </div>
+                    <div class="hero-trust-badges">
+                        <div class="badge">
+                            <span class="badge-icon">💖</span>
+                            <span class="badge-text">Pedagogia de Afeto</span>
+                        </div>
+                        <div class="badge">
+                            <span class="badge-icon">🏡</span>
+                            <span class="badge-text">Espaços Verdes e Hortas</span>
+                        </div>
+                        <div class="badge">
+                            <span class="badge-icon">🥦</span>
+                            <span class="badge-text">Nutrição Equilibrada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="organic-frame-container">
+                        <div class="hero-sun"></div>
+                        <div class="hero-cloud cloud-1">☁️</div>
+                        <div class="hero-cloud cloud-2">☁️</div>
+                        
+                        <div class="organic-frame">
+                            <div class="organic-frame-inner">
+                                <svg class="magical-growth-illustration" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#E8F4F8"/>
+                                            <stop offset="100%" stop-color="#FFFFFF"/>
+                                        </linearGradient>
+                                        <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#4CB877"/>
+                                            <stop offset="100%" stop-color="#2F754B"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="200" cy="200" r="180" fill="url(#skyGrad)" />
+                                    <circle cx="310" cy="90" r="40" fill="rgba(255, 213, 79, 0.4)" />
+                                    <circle cx="310" cy="90" r="25" fill="var(--sun-yellow)" />
+                                    
+                                    <path d="M50,300 Q150,260 250,310 T380,280 L380,380 L50,380 Z" fill="var(--mint-light)" opacity="0.4" />
+                                    <path d="M20,320 Q120,290 220,330 T380,310 L380,380 L20,380 Z" fill="var(--mint-light)" opacity="0.7" />
+                                    <path d="M10,340 Q160,320 280,350 T390,335 L390,380 L10,380 Z" fill="var(--primary-green)" opacity="0.9" />
+
+                                    <!-- Seedling drawing -->
+                                    <path d="M200,350 C180,280 220,180 190,110" fill="none" stroke="var(--primary-green)" stroke-width="8" stroke-linecap="round" />
+                                    <path d="M200,350 C185,280 225,180 195,110" fill="none" stroke="var(--accent-leaf)" stroke-width="4" stroke-linecap="round" />
+                                    
+                                    <path d="M195,240 Q170,220 180,200 T210,210" fill="none" stroke="var(--accent-leaf)" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M205,170 Q240,150 230,130 T195,150" fill="none" stroke="var(--accent-leaf)" stroke-width="2" stroke-linecap="round" />
+                                    
+                                    <path d="M205,250 C240,240 260,190 230,200 C200,210 200,240 205,250" fill="url(#leafGrad)" />
+                                    <path d="M195,200 C160,190 140,140 170,150 C200,160 190,190 195,200" fill="var(--primary-green)" />
+                                    <path d="M195,140 C220,120 240,80 210,90 C180,100 190,130 195,140" fill="url(#leafGrad)" />
+                                    <path d="M190,110 C180,85 195,60 200,70 C205,80 195,100 190,110" fill="var(--sun-yellow)" />
+
+                                    <path d="M250,90 L253,96 L260,97 L255,102 L256,108 L250,104 L244,108 L245,102 L240,97 L247,96 Z" fill="var(--sun-yellow)" />
+                                    <path d="M130,160 L132,164 L137,165 L133,169 L134,174 L130,171 L126,174 L127,169 L123,165 L128,164 Z" fill="var(--sun-yellow)" opacity="0.8" />
+                                    <path d="M280,220 L281.5,224 L285,225 L282,228 L283,232 L280,230 L277,232 L278,228 L275,225 L278.5,224 Z" fill="var(--sun-yellow)" />
+                                    
+                                    <path d="M120,100 C125,90 135,95 130,105 C135,115 125,120 120,110 C115,120 105,115 110,105 C105,95 115,90 120,100" fill="var(--accent-leaf)" opacity="0.8" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wave transition divider -->
+            <div class="curve-separator">
+                <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,80 C320,140 720,20 1080,70 C1260,95 1380,110 1440,110 L1440,120 L0,120 Z" fill="var(--off-white)"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Pedagogical Pillars Section (The Roots) -->
+        <section id="projeto" class="section pedagogy-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">As Nossas Raízes</span>
+                    <h2 class="section-title">O Nosso Projeto Pedagógico</h2>
+                    <p class="section-desc">
+                        Focado na Educação Ambiental, Sustentabilidade Ativa e Estímulo Emocional precoce para estruturar um crescimento saudável.
+                    </p>
+                </div>
+
+                <!-- 3 Interactive Pods with Intersection Observer Blossom Effect -->
+                <div class="pedagogy-grid">
+                    <!-- Pod 1 -->
+                    <div class="pedagogy-card animate-scroll">
+                        <div class="card-shape-bg shape-1"></div>
+                        <div class="card-icon-container">
+                            <span class="card-icon">💖</span>
+                        </div>
+                        <h3>Desenvolvimento Emocional</h3>
+                        <p>O afeto é a nossa fundação. Criamos vínculos afetivos profundos e seguros que dão a estabilidade emocional e a confiança necessárias para a criança interagir com o meio.</p>
+                        <div class="card-leaf-accent"></div>
+                    </div>
+
+                    <!-- Pod 2 -->
+                    <div class="pedagogy-card animate-scroll">
+                        <div class="card-shape-bg shape-2"></div>
+                        <div class="card-icon-container">
+                            <span class="card-icon">🧩</span>
+                        </div>
+                        <h3>Exploração Ativa</h3>
+                        <p>Incentivamos o brincar livre e estruturado, a curiosidade científica e experiências táteis sensoriais para desenvolver o raciocínio crítico e a motricidade autónoma.</p>
+                        <div class="card-leaf-accent"></div>
+                    </div>
+
+                    <!-- Pod 3 -->
+                    <div class="pedagogy-card animate-scroll">
+                        <div class="card-shape-bg shape-3"></div>
+                        <div class="card-icon-container">
+                            <span class="card-icon">🌱</span>
+                        </div>
+                        <h3>Educação Ambiental & Sustentabilidade</h3>
+                        <p>Aprendizagem prática diária no nosso Eco-Clube, contato físico direto com a terra, cultivo de legumes e compostagem, estimulando cidadãos ecológicos conscientes.</p>
+                        <div class="card-leaf-accent"></div>
+                    </div>
+                </div>
+
+                <div class="pedagogy-quote-block animate-scroll">
+                    <div class="quote-leaves">🌱</div>
+                    <blockquote class="pedagogy-quote">
+                        "Preparamos o solo educativo ideal com afeto e sustentabilidade. Cada criança é uma semente única com um potencial infinito para crescer bem alto!"
+                    </blockquote>
+                    <cite class="quote-author">— Direção de Educação, Infantário S. Vicente</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wave transition divider -->
+        <div class="curve-separator top-wave">
+            <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 Q360,100 720,40 T1440,40 L1440,100 L0,100 Z" fill="var(--sky-blue)"/>
+            </svg>
+        </div>
+
+        <!-- Services Module (The Branches) -->
+        <section id="servicos" class="section spaces-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Espaços Felizes</span>
+                    <h2 class="section-title">Os Nossos Espaços & Valências</h2>
+                    <p class="section-desc">
+                        Quatro áreas fundamentais com layouts e dinâmicas desenhadas especificamente para cada patamar de desenvolvimento.
+                    </p>
+                </div>
+
+                <div class="spaces-grid">
+                    <!-- Service 1: Berçário -->
+                    <article class="space-card animate-scroll" style="--card-index: 1;">
+                        <div class="space-image-placeholder color-pink">
+                            <svg viewBox="0 0 100 100" class="space-svg-icon" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.3)" />
+                                <text x="50" y="58" font-size="36" text-anchor="middle">🍼</text>
+                            </svg>
+                            <span class="space-age">4 a 12 meses</span>
+                        </div>
+                        <div class="space-card-content">
+                            <h3>Berçário</h3>
+                            <p>Refúgio de paz absoluta e estimulação sensorial adaptada. Cuidados especializados e transição segura sob rotinas de sono e mamadas controladas.</p>
+                            <ul class="space-features">
+                                <li>✨ Sala de repouso climatizada e acústica</li>
+                                <li>✨ Copa de leites dedicada com HACCP</li>
+                                <li>✨ Ginásio de psicomotricidade fina mole</li>
+                            </ul>
+                            <button class="btn btn-outline-leaf btn-block open-modal-btn" data-modal="modal-bercario">Saber Mais</button>
+                        </div>
+                    </article>
+
+                    <!-- Service 2: Creche -->
+                    <article class="space-card animate-scroll" style="--card-index: 2;">
+                        <div class="space-image-placeholder color-teal">
+                            <svg viewBox="0 0 100 100" class="space-svg-icon" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.3)" />
+                                <text x="50" y="58" font-size="36" text-anchor="middle">🧸</text>
+                            </svg>
+                            <span class="space-age">1 a 3 anos</span>
+                        </div>
+                        <div class="space-card-content">
+                            <h3>Creche</h3>
+                            <p>Foco total na linguagem verbal, motricidade ativa livre e competências de socialização saudável em salas amplas e dinâmicas.</p>
+                            <ul class="space-features">
+                                <li>✨ Cantos de jogos simbólicos organizados</li>
+                                <li>✨ Pátio seguro exterior de exploração</li>
+                                <li>✨ Iniciação pedagógica pelas artes</li>
+                            </ul>
+                            <button class="btn btn-outline-leaf btn-block open-modal-btn" data-modal="modal-creche">Saber Mais</button>
+                        </div>
+                    </article>
+
+                    <!-- Service 3: Jardim de Infância -->
+                    <article class="space-card animate-scroll" style="--card-index: 3;">
+                        <div class="space-image-placeholder color-yellow">
+                            <svg viewBox="0 0 100 100" class="space-svg-icon" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.3)" />
+                                <text x="50" y="58" font-size="36" text-anchor="middle">🎨</text>
+                            </svg>
+                            <span class="space-age">3 a 6 anos</span>
+                        </div>
+                        <div class="space-card-content">
+                            <h3>Jardim de Infância</h3>
+                            <p>Preparação para a pré-escolaridade ativa, desenvolvimento lógico-matemático e envolvimento contínuo em projetos de preservação biológica.</p>
+                            <ul class="space-features">
+                                <li>✨ Horticultura experimental integrada</li>
+                                <li>✨ Projetos artísticos de pintura e teatro</li>
+                                <li>✨ Sensibilização musical e musicalidade</li>
+                            </ul>
+                            <button class="btn btn-outline-leaf btn-block open-modal-btn" data-modal="modal-jardim">Saber Mais</button>
+                        </div>
+                    </article>
+
+                    <!-- Service 4: CATL / Apoio Escolar (Added 4th Core Area) -->
+                    <article class="space-card animate-scroll" style="--card-index: 4;">
+                        <div class="space-image-placeholder color-orange">
+                            <svg viewBox="0 0 100 100" class="space-svg-icon" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.3)" />
+                                <text x="50" y="58" font-size="36" text-anchor="middle">🎒</text>
+                            </svg>
+                            <span class="space-age">6 a 10 anos</span>
+                        </div>
+                        <div class="space-card-content">
+                            <h3>CATL & Apoio de Estudo</h3>
+                            <p>Apoio escolar especializado nas tarefas escolares diárias, estudo guiado individualizado e dinâmicas criativas pós-letivas.</p>
+                            <ul class="space-features">
+                                <li>✨ Estudo acompanhado focado por professores</li>
+                                <li>✨ Oficinas de robótica, artes e culinária</li>
+                                <li>✨ Transporte escolar dedicado das escolas</li>
+                            </ul>
+                            <button class="btn btn-outline-leaf btn-block open-modal-btn" data-modal="modal-catl">Saber Mais</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Extra-curricular Slider/Grid -->
+                <div class="extracurriculars-section animate-scroll">
+                    <h3 class="extra-title text-center">Atividades Extracurriculares & Bem-estar</h3>
+                    <div class="extra-grid">
+                        <div class="extra-item">
+                            <div class="extra-icon">🎵</div>
+                            <h4>Sensibilização Musical</h4>
+                            <p>O ritmo e a voz para estimular a coordenação auditiva e a sensibilidade.</p>
+                        </div>
+                        <div class="extra-item">
+                            <div class="extra-icon">🧘‍♂️</div>
+                            <h4>Yoga para Crianças</h4>
+                            <p>Relaxamento, consciência corporal ativa e equilíbrio de emoções.</p>
+                        </div>
+                        <div class="extra-item">
+                            <div class="extra-icon">🇬🇧</div>
+                            <h4>Inglês Criativo</h4>
+                            <p>Aquisição precoce de vocabulário básico através de teatrinhos de fantoches.</p>
+                        </div>
+                        <div class="extra-item">
+                            <div class="extra-icon">🌾</div>
+                            <h4>Eco-Clube Hortinha</h4>
+                            <p>Cuidado prático diário da nossa horta biológica e canteiros ecológicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wave transition divider -->
+        <div class="curve-separator top-wave">
+            <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,50 C480,0 960,100 1440,50 L1440,100 L0,100 Z" fill="var(--off-white)"/>
+            </svg>
+        </div>
+
+        <!-- Interactive Parent Hub (The Harvest) -->
+        <section id="pais" class="section parents-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">A Nossa Parceria</span>
+                    <h2 class="section-title">Informações para as Famílias</h2>
+                    <p class="section-desc">
+                        Acesso simplificado à rotina alimentar escolar semanal e cofre eletrónico para download de documentação pedagógica oficial.
+                    </p>
+                </div>
+
+                <!-- Ementas Board -->
+                <div class="ementas-container animate-scroll" id="ementas-anchor">
+                    <div class="ementa-header">
+                        <div class="ementa-header-title">
+                            <h3>🍽️ Ementa Escolar Semanal</h3>
+                            <p>Equilíbrio nutricional rigoroso certificado, com opções biológicas e sazonais frescas.</p>
+                        </div>
+                        
+                        <div class="tabs-list" role="tablist" aria-label="Ementa Semanal por Dias">
+                            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="menu-segunda" id="tab-segunda">Seg</button>
+                            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="menu-terca" id="tab-terca">Ter</button>
+                            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="menu-quarta" id="tab-quarta">Qua</button>
+                            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="menu-quinta" id="tab-quinta">Qui</button>
+                            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="menu-sexta" id="tab-sexta">Sex</button>
+                        </div>
+                    </div>
+
+                    <div class="ementa-body">
+                        <!-- Monday -->
+                        <div class="tab-content active" id="menu-segunda" role="tabpanel" aria-labelledby="tab-segunda">
+                            <div class="menu-items-grid">
+                                <div class="menu-course-card">
+                                    <span class="course-badge soup">🍵 Sopa</span>
+                                    <h4>Creme de Cenoura com Coração de Espinafre</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge main">🐟 Prato Principal</span>
+                                    <h4>Pescada Grelhada com Arroz Primavera e Salada de Alface</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge dessert">🍏 Sobremesa</span>
+                                    <h4>Manga Fatiada ou Maçã Cozida com Salpicos de Canela</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge snack">🥖 Lanche da Tarde</span>
+                                    <h4>Pão de Mistura com Manteiga e Chá de Cidreira Biológico</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tuesday -->
+                        <div class="tab-content" id="menu-terca" role="tabpanel" aria-labelledby="tab-terca" hidden>
+                            <div class="menu-items-grid">
+                                <div class="menu-course-card">
+                                    <span class="course-badge soup">🍵 Sopa</span>
+                                    <h4>Sopa de Ervilhas com Alho-Francês Salteado</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge main">🍗 Prato Principal</span>
+                                    <h4>Peito de Peru Estufado com Puré de Batata Doce e Brócolos</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge dessert">🍏 Sobremesa</span>
+                                    <h4>Salada de Fruta da Época Sem Açúcar Adicionado</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge snack">🥖 Lanche da Tarde</span>
+                                    <h4>Iogurte Natural Cremoso com Granola Caseira e Bananas</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wednesday -->
+                        <div class="tab-content" id="menu-quarta" role="tabpanel" aria-labelledby="tab-quarta" hidden>
+                            <div class="menu-items-grid">
+                                <div class="menu-course-card">
+                                    <span class="course-badge soup">🍵 Sopa</span>
+                                    <h4>Sopa de Feijão Verde Estaladiço e Abóbora Assada</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge main">🥕 Prato Principal (Veg)</span>
+                                    <h4>Empadão de Lentilhas Castanhas com Arroz Integral Horta</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge dessert">🍏 Sobremesa</span>
+                                    <h4>Pêra Assada no Forno ou Maçã Golden do Pomar</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge snack">🥖 Lanche da Tarde</span>
+                                    <h4>Papas de Aveia Caseiras com Leite Meio-Gordo</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thursday -->
+                        <div class="tab-content" id="menu-quinta" role="tabpanel" aria-labelledby="tab-quinta" hidden>
+                            <div class="menu-items-grid">
+                                <div class="menu-course-card">
+                                    <span class="course-badge soup">🍵 Sopa</span>
+                                    <h4>Creme de Couve-Flor Aveludado com Folhas de Salsa</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge main">🍝 Prato Principal</span>
+                                    <h4>Massa Espirais à Bolonhesa de Aves com Mini-Tomatinhos</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge dessert">🍏 Sobremesa</span>
+                                    <h4>Salada de Laranja Cortada com Folhinha de Hortelã</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge snack">🥖 Lanche da Tarde</span>
+                                    <h4>Pão de Centeio com Queijo Fresco de Cabra e Sumo Maçã</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Friday -->
+                        <div class="tab-content" id="menu-sexta" role="tabpanel" aria-labelledby="tab-sexta" hidden>
+                            <div class="menu-items-grid">
+                                <div class="menu-course-card">
+                                    <span class="course-badge soup">🍵 Sopa</span>
+                                    <h4>Sopa de Abóbora do Quintal e Grão-de-Bico</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge main">🐟 Prato Principal</span>
+                                    <h4>Filete de Pescada Dourado no Forno com Batatas Assadas e Cenoura</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge dessert">🍏 Sobremesa</span>
+                                    <h4>Meloa Doce Fatiada ou Banana Fresca da Madeira</h4>
+                                </div>
+                                <div class="menu-course-card">
+                                    <span class="course-badge snack">🥖 Lanche da Tarde</span>
+                                    <h4>Pão com Fiambre de Peru e Batido Natural de Morango</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Vault (Regulamento & Projeto Educativo with hover-to-preview functionality) -->
+                <div class="downloads-grid animate-scroll">
+                    <!-- Document 1: Regulamento Interno -->
+                    <div class="download-card">
+                        <div class="download-card-icon">📂</div>
+                        <div class="download-card-body">
+                            <h4>Regulamento Interno</h4>
+                            <p>Normas regimentais de funcionamento, seguros e horários letivos oficiais.</p>
+                            
+                            <!-- Custom Hover-to-preview/A11y drawer -->
+                            <div class="doc-preview-pane" id="preview-regulamento" aria-expanded="false">
+                                <h5>📄 Destaques do Regulamento:</h5>
+                                <ul>
+                                    <li>✔ Horário Geral: Abertura às 07:30 e fecho às 19:00</li>
+                                    <li>✔ Tolerância limite de receção de crianças até às 09:30</li>
+                                    <li>✔ Condições de Seguro Escolar incluído nas mensalidades</li>
+                                    <li>✔ Normas para fornecimento e controlo de roupas e fraldas</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="download-card-actions">
+                                <button class="btn btn-outline-leaf btn-small btn-preview-doc" data-target="preview-regulamento">Pré-visualizar</button>
+                                <a href="#" class="btn btn-leaf btn-small btn-download" data-file="Regulamento_Interno_FeijoeiroMagico.pdf">
+                                    <span class="btn-text">Descarregar PDF</span>
+                                    <span class="progress-bar"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document 2: Projeto Educativo -->
+                    <div class="download-card">
+                        <div class="download-card-icon">📖</div>
+                        <div class="download-card-body">
+                            <h4>Projeto Educativo</h4>
+                            <p>Conceito estrutural da nossa pedagogia emocional e eco-sustentável.</p>
+                            
+                            <!-- Custom Hover-to-preview/A11y drawer -->
+                            <div class="doc-preview-pane" id="preview-projeto-ped" aria-expanded="false">
+                                <h5>📄 Destaques do Projeto Educativo:</h5>
+                                <ul>
+                                    <li>✔ Pedagogia centrada no afeto e autonomia da criança</li>
+                                    <li>✔ Planos de sustentabilidade (Eco-Horta e Compostagem ativa)</li>
+                                    <li>✔ Projetos multidisciplinares com a comunidade local</li>
+                                    <li>✔ Foco no desenvolvimento social inclusivo adaptado</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="download-card-actions">
+                                <button class="btn btn-outline-leaf btn-small btn-preview-doc" data-target="preview-projeto-ped">Pré-visualizar</button>
+                                <a href="#" class="btn btn-leaf btn-small btn-download" data-file="Projeto_Educativo_FeijoeiroMagico.pdf">
+                                    <span class="btn-text">Descarregar PDF</span>
+                                    <span class="progress-bar"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document 3: Manual de Saúde e Nutrição -->
+                    <div class="download-card">
+                        <div class="download-card-icon">🍎</div>
+                        <div class="download-card-body">
+                            <h4>Manual de Saúde e Nutrição</h4>
+                            <p>Padrão alimentar certificado e regras sanitárias preventivas infantis.</p>
+                            
+                            <!-- Custom Hover-to-preview/A11y drawer -->
+                            <div class="doc-preview-pane" id="preview-saude" aria-expanded="false">
+                                <h5>📄 Destaques do Manual de Saúde:</h5>
+                                <ul>
+                                    <li>✔ Ementas semanais nutricionais validadas</li>
+                                    <li>✔ Prevenção rigorosa e gestão rápida de alergias (HACCP)</li>
+                                    <li>✔ Regulação de medicamentos com receita oficial</li>
+                                    <li>✔ Triagem de sintomas em quadros de febre infantis</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="download-card-actions">
+                                <button class="btn btn-outline-leaf btn-small btn-preview-doc" data-target="preview-saude">Pré-visualizar</button>
+                                <a href="#" class="btn btn-leaf btn-small btn-download" data-file="Manual_Saude_Nutricao_FeijoeiroMagico.pdf">
+                                    <span class="btn-text">Descarregar PDF</span>
+                                    <span class="progress-bar"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wave transition divider -->
+        <div class="curve-separator top-wave">
+            <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,60 C400,10 800,90 1440,40 L1440,100 L0,100 Z" fill="var(--primary-green)"/>
+            </svg>
+        </div>
+
+        <!-- Contacts, Maps & Footer (The Ground) -->
+        <section id="contactos" class="section contacts-section">
+            <div class="container">
+                <div class="section-header text-center invert-colors">
+                    <span class="section-tag">Fale Connosco</span>
+                    <h2 class="section-title">Cultive Esta Ligação</h2>
+                    <p class="section-desc">
+                        Esclareça qualquer dúvida ou agende um encontro pedagógico no nosso espaço seguro.
+                    </p>
+                </div>
+
+                <div class="contacts-grid">
+                    <!-- Form Column -->
+                    <div class="contact-form-container animate-scroll">
+                        <h3 class="form-title">✉️ Enviar Mensagem Mágica</h3>
+                        
+                        <!-- Paper-plane flight path scene overlay -->
+                        <div class="paper-plane-scene" id="paper-plane-scene" aria-hidden="true">
+                            <svg class="paper-plane-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15,50 L85,15 L70,85 L50,60 L15,50 Z M85,15 L50,60 L70,85 Z" fill="var(--accent-leaf)" stroke="var(--primary-green)" stroke-width="3" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="form-name" required placeholder=" ">
+                                <label for="form-name">Nome do Pai / Encarregado</label>
+                                <span class="error-msg" id="error-name">Por favor, introduza o seu nome</span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="form-email" required placeholder=" ">
+                                <label for="form-email">Endereço de E-mail</label>
+                                <span class="error-msg" id="error-email">Por favor, introduza um e-mail válido</span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="tel" id="form-phone" required placeholder=" ">
+                                <label for="form-phone">Número de Telefone</label>
+                                <span class="error-msg" id="error-phone">Por favor, introduza um telefone válido (9 dígitos)</span>
+                            </div>
+
+                            <div class="form-group">
+                                <select id="form-interest" required>
+                                    <option value="" disabled selected hidden></option>
+                                    <option value="bercario">Berçário (4 a 12 meses)</option>
+                                    <option value="creche">Creche (1 a 3 anos)</option>
+                                    <option value="jardim">Jardim de Infância (3 a 6 anos)</option>
+                                    <option value="catl">CATL & Apoio de Estudo (6 a 10 anos)</option>
+                                    <option value="geral">Questão Geral / Parcerias</option>
+                                </select>
+                                <label for="form-interest" class="select-label">Área de Interesse</label>
+                                <span class="error-msg" id="error-interest">Por favor, escolha uma opção</span>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="form-message" required placeholder=" " rows="4"></textarea>
+                                <label for="form-message">Mensagem ou Dúvida</label>
+                                <span class="error-msg" id="error-message">Mínimo de 10 caracteres explicativos</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-leaf btn-block btn-submit-magic">
+                                <span class="btn-submit-text">Enviar Mensagem</span>
+                                <span class="btn-submit-icon">🌱</span>
+                            </button>
+                        </form>
+
+                        <!-- Success Box Container -->
+                        <div class="form-success-overlay" id="form-success-block" aria-hidden="true">
+                            <div class="success-message-box">
+                                <div class="success-icon">🌱✨</div>
+                                <h3>Semente de Comunicação Plantada!</h3>
+                                <p>Obrigado pelo seu contacto. A equipa do Feijoeiro Mágico responderá à sua mensagem com o carinho merecido, num prazo máximo de 24 horas úteis por correio eletrónico ou telefone.</p>
+                                <p class="success-lore">"O feijoeiro cresceu e levou a sua mensagem até nós!"</p>
+                                <button class="btn btn-leaf" id="close-success-btn">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map and Contact Info Column -->
+                    <div class="contact-info-container animate-scroll">
+                        <div class="info-blocks">
+                            <div class="info-block">
+                                <div class="info-block-icon">📍</div>
+                                <div class="info-block-content">
+                                    <h4>A Nossa Casa</h4>
+                                    <p>Avenida Dr. Francisco Sá Carneiro, nº 71,<br>4445-102 Alfena (Valongo), Portugal</p>
+                                </div>
+                            </div>
+
+                            <div class="info-block">
+                                <div class="info-block-icon">📞</div>
+                                <div class="info-block-content">
+                                    <h4>Telefone Direto</h4>
+                                    <p><a href="tel:+351229684964" class="footer-link">229 684 964</a> (Rede fixa nacional)</p>
+                                </div>
+                            </div>
+
+                            <div class="info-block">
+                                <div class="info-block-icon">✉️</div>
+                                <div class="info-block-content">
+                                    <h4>Correio Eletrónico</h4>
+                                    <p><a href="mailto:geral@feijoeiromagico.pt" class="footer-link">geral@feijoeiromagico.pt</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-block">
+                                <div class="info-block-icon">⏰</div>
+                                <div class="info-block-content">
+                                    <h4>Horário de Portas</h4>
+                                    <p>Segunda a Sexta-Feira: <strong>07:30 - 19:00</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Custom Styled Google Map Integration -->
+                        <div class="map-wrapper">
+                            <iframe 
+                                title="Localização Real do Feijoeiro Mágico no Google Maps"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.7420556272996!2d-8.5286591!3d41.238491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd248b615c898c61%3A0xc07c91f6920f3162!2sAv.%20Dr.%20Francisco%20S%C3%A1%20Carneiro%2071%2C%204445-102%20Alfena!5e0!3m2!1spt!2spt!4v1700000000000!5m2!1spt!2spt" 
+                                width="100%" 
+                                height="220" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            <div class="map-overlay-button">
+                                <a href="https://maps.google.com/?q=Avenida+Dr.+Francisco+S%C3%A1+Carneiro+71,+Alfena,+Valongo" target="_blank" rel="noopener noreferrer" class="btn btn-leaf btn-small">Ver Rota Completa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-curved-background">
+            <svg class="footer-silhouette-svg" viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,50 Q200,80 400,60 T800,50 T1200,70 T1440,60 L1440,100 L0,100 Z" fill="var(--forest-dark)"/>
+            </svg>
+        </div>
+
+        <div class="container footer-content-container">
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">🌱 Feijoeiro Mágico</div>
+                    <p class="footer-tagline">Uma comunidade acolhedora sob gestão dedicada da Associação Feijoeiro Mágico no histórico Infantário S. Vicente de Alfena. Ajudamos a sonhar e a germinar o saber ecológico.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook" class="social-icon-btn">📘</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="social-icon-btn">📸</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Youtube" class="social-icon-btn">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#projeto" class="footer-link">Projeto Pedagógico</a></li>
+                        <li><a href="servicos.html" class="footer-link">Serviços</a></li>
+                        <li><a href="#pais" class="footer-link">Ementas da Semana</a></li>
+                        <li><a href="#pais" class="footer-link">Cofre de Documentos</a></li>
+                        <li><a href="contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-legal-col">
+                    <h4>Legislação & Informação</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Políticas de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Política de Cookies</a></li>
+                        <li><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" class="footer-link">Livro de Reclamações</a></li>
+                        <li><a href="#" class="footer-link">Ficha Técnica da Licença</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 Associação Feijoeiro Mágico (Infantário S. Vicente). Todos os direitos reservados.</p>
+                <p class="footer-credit">Desenhado com 💚 para as nossas queridas crianças.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Detail Modals (Glassmorphic Accessible Overlay) -->
+    
+    <!-- Modal 1: Berçário -->
+    <div class="modal-overlay" id="modal-bercario" aria-hidden="true" role="dialog" aria-labelledby="modal-bercario-title">
+        <div class="modal-window">
+            <button class="modal-close-btn" aria-label="Fechar janela de detalhes">&times;</button>
+            <div class="modal-decor-leaf">🍃</div>
+            <h3 id="modal-bercario-title" class="modal-title">👶 Espaço Berçário (4 aos 12 meses)</h3>
+            <p class="modal-lead">Um ambiente sereno de transição suave do ambiente familiar para o acolhimento coletivo, primando pela paz e segurança absoluta.</p>
+            
+            <h4>Principais Serviços e Instalações:</h4>
+            <ul>
+                <li>🍼 <strong>Copa de Leites Especializada:</strong> Preparação rigorosa de biberões e primeiras papas seguindo estritas recomendações pediátricas.</li>
+                <li>🛌 <strong>Sala de Sono Confortável:</strong> Isolamento acústico completo, luz indireta, berços individuais monitorizados e temperatura ambiente ideal controlada automaticamente.</li>
+                <li>🧸 <strong>Sala de Parque e Estimulação:</strong> Piso macio, espelhos de segurança a baixa altura e materiais táteis de alta qualidade adaptados para a exploração corporal precoce.</li>
+            </ul>
+
+            <h4>Exemplo de Rotina Diária:</h4>
+            <table class="modal-routine-table">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Atividade / Cuidados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07:30 - 09:30</td>
+                        <td>Acolhimento individualizado e repouso inicial tranquilo.</td>
+                    </tr>
+                    <tr>
+                        <td>09:30 - 11:30</td>
+                        <td>Alimentação (leite/papas) e sessão de estimulação sensorial ativa.</td>
+                    </tr>
+                    <tr>
+                        <td>11:30 - 13:30</td>
+                        <td>Higiene, sesta aconchegante individualizada.</td>
+                    </tr>
+                    <tr>
+                        <td>13:30 - 15:30</td>
+                        <td>Almoço, música calma e estimulação motora fina livre.</td>
+                    </tr>
+                    <tr>
+                        <td>15:30 - 17:30</td>
+                        <td>Lanche da tarde, higiene e brincadeira tátil no tapete.</td>
+                    </tr>
+                    <tr>
+                        <td>17:30 - 19:00</td>
+                        <td>Preparação para a saída e jogos de relaxamento com os educadores.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-leaf modal-close-cta">Fechar Detalhes</button>
+        </div>
+    </div>
+
+    <!-- Modal 2: Creche -->
+    <div class="modal-overlay" id="modal-creche" aria-hidden="true" role="dialog" aria-labelledby="modal-creche-title">
+        <div class="modal-window">
+            <button class="modal-close-btn" aria-label="Fechar janela de detalhes">&times;</button>
+            <div class="modal-decor-leaf">🍃</div>
+            <h3 id="modal-creche-title" class="modal-title">🧸 Espaço Creche (1 aos 3 anos)</h3>
+            <p class="modal-lead">Etapa mágica onde se constroem as primeiras grandes amizades, estimula-se a linguagem verbal e desenvolve-se a autonomia motora ativa.</p>
+            
+            <h4>Principais Atividades e Rotinas:</h4>
+            <ul>
+                <li>🧩 <strong>Atividades de Concentração e Motricidade:</strong> Blocos de encaixe gigantes, plasticina biológica e atividades artísticas para treinar a destreza dos pequenos dedinhos.</li>
+                <li>💬 <strong>Fomento de Linguagem:</strong> Momentos de leitura em círculo, teatrinhos de fantoches e canções que enriquecem o vocabulário e a expressão social.</li>
+                <li>🏡 <strong>Parque Exterior Seguro:</strong> Playground vedado e relvado com escorregas de segurança, túneis de exploração e caixas de areia para brincadeiras ao ar livre.</li>
+            </ul>
+
+            <h4>Exemplo de Rotina Diária:</h4>
+            <table class="modal-routine-table">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Atividade / Cuidados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07:30 - 09:30</td>
+                        <td>Acolhimento alegre nas salas e brincadeira livre em cantos temáticos.</td>
+                    </tr>
+                    <tr>
+                        <td>09:30 - 10:30</td>
+                        <td>Atividade de roda (Conversa, história diária, canções de bom dia).</td>
+                    </tr>
+                    <tr>
+                        <td>10:30 - 12:00</td>
+                        <td>Expressão plástica ou jogo motor ativo no parque infantil exterior.</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:00</td>
+                        <td>Almoço feliz e treino de autonomia na mesa (uso de talheres).</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 15:30</td>
+                        <td>Higiene pessoal e a merecida sesta da tarde.</td>
+                    </tr>
+                    <tr>
+                        <td>15:30 - 16:30</td>
+                        <td>Lanche da tarde equilibrado e limpeza.</td>
+                    </tr>
+                    <tr>
+                        <td>16:30 - 19:00</td>
+                        <td>Atividades lúdico-pedagógicas de fim de dia e regresso a casa.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-leaf modal-close-cta">Fechar Detalhes</button>
+        </div>
+    </div>
+
+    <!-- Modal 3: Jardim de Infância -->
+    <div class="modal-overlay" id="modal-jardim" aria-hidden="true" role="dialog" aria-labelledby="modal-jardim-title">
+        <div class="modal-window">
+            <button class="modal-close-btn" aria-label="Fechar janela de detalhes">&times;</button>
+            <div class="modal-decor-leaf">🍃</div>
+            <h3 id="modal-jardim-title" class="modal-title">🎨 Jardim de Infância (3 aos 6 anos)</h3>
+            <p class="modal-lead">Foco na pré-escolaridade, estimulação do pensamento científico precoce, noções matemáticas lúdicas e preparação social sólida para o ensino básico.</p>
+            
+            <h4>Os Nossos Diferenciais:</h4>
+            <ul>
+                <li>🚜 <strong>Horta Pedagógica Ativa:</strong> As crianças plantam, regam e colhem os seus próprios legumes, integrando conceitos de botânica prática e biologia.</li>
+                <li>🔬 <strong>Pequenos Cientistas:</strong> Experiências físicas e químicas seguras no laboratório lúdico (efeito vulcão, flutua ou afunda, capilaridade de tintas).</li>
+                <li>🎭 <strong>Expressão Dramática:</strong> Criação de pequenos teatros e danças coletivas para impulsionar a desenvoltura pública e a autoconfiança expressiva.</li>
+            </ul>
+
+            <h4>Exemplo de Rotina Diária:</h4>
+            <table class="modal-routine-table">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Atividade / Cuidados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07:30 - 09:15</td>
+                        <td>Acolhimento escolar dinâmico e organização das tarefas do dia.</td>
+                    </tr>
+                    <tr>
+                        <td>09:15 - 10:30</td>
+                        <td>Área de Projeto (Pesquisa em grupo, desenho, escrita livre lúdica).</td>
+                    </tr>
+                    <tr>
+                        <td>10:30 - 12:00</td>
+                        <td>Ar livre e atividade ambiental (cuidado da horta e recolha de sementes).</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:00</td>
+                        <td>Almoço completo e escovagem de dentes autónoma.</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 14:30</td>
+                        <td>Repouso em colchões individuais (leitura de histórias ou audição musical).</td>
+                    </tr>
+                    <tr>
+                        <td>14:30 - 16:00</td>
+                        <td>Ateliê de matemática e lógica interativa / Oficina de inglês criativo.</td>
+                    </tr>
+                    <tr>
+                        <td>16:00 - 19:00</td>
+                        <td>Lanche, brincadeira livre orientada no exterior e recolha.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-leaf modal-close-cta">Fechar Detalhes</button>
+        </div>
+    </div>
+
+    <!-- Modal 4: CATL (Added for 4th Core Area) -->
+    <div class="modal-overlay" id="modal-catl" aria-hidden="true" role="dialog" aria-labelledby="modal-catl-title">
+        <div class="modal-window">
+            <button class="modal-close-btn" aria-label="Fechar janela de detalhes">&times;</button>
+            <div class="modal-decor-leaf">🍃</div>
+            <h3 id="modal-catl-title" class="modal-title">🎒 Espaço CATL & Apoio de Estudo (6 aos 10 anos)</h3>
+            <p class="modal-lead">Estudo acompanhado especializado pós-letivo e clubes de atividades criativas livres, complementando o percurso escolar primário.</p>
+            
+            <h4>Os Nossos Programas Especiais:</h4>
+            <ul>
+                <li>✏️ <strong>Estudo Autónomo Guiado:</strong> Apoio pedagógico estruturado para esclarecimento de dúvidas e concretização de deveres de casa diários.</li>
+                <li>🧠 <strong>Clubes STEAM & Robótica:</strong> Projetos lúdicos básicos de código, eletrónica e montagem de pequenas maquetes mecânicas ecológicas.</li>
+                <li>🎨 <strong>Oficina Criativa Semanal:</strong> Sessões rotativas de culinária saudável prática infantil, teatro lúdico e carpintaria básica em madeira reciclada.</li>
+            </ul>
+
+            <h4>Exemplo de Rotina Diária (Período de Aulas):</h4>
+            <table class="modal-routine-table">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Atividade / Cuidados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07:30 - 08:30</td>
+                        <td>Acolhimento escolar e transporte em autocarro escolar para as escolas do agrupamento.</td>
+                    </tr>
+                    <tr>
+                        <td>14:30 - 15:30</td>
+                        <td>Receção no CATL, lanche da tarde equilibrado e reforçado de recarga.</td>
+                    </tr>
+                    <tr>
+                        <td>15:30 - 17:00</td>
+                        <td>Estudo Acompanhado obrigatório por professores de ensino primário.</td>
+                    </tr>
+                    <tr>
+                        <td>17:00 - 18:00</td>
+                        <td>Clube de atividades e oficinas (Robótica, Artes Plásticas, Teatro).</td>
+                    </tr>
+                    <tr>
+                        <td>18:00 - 19:00</td>
+                        <td>Brincadeira livre no playground verde ou sala de jogos e saída tranquila.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-leaf modal-close-cta">Fechar Detalhes</button>
+        </div>
+    </div>
+
+    <!-- JS Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>

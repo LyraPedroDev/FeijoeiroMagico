@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Celebre Festas de Aniversário mágicas no Feijoeiro Mágico. Espaço com parque infantil, escalada, laser tag, insufláveis e bolos personalizados.">
+    <meta name="keywords" content="festas de aniversario alfena, aluguer insuflaveis alfena, laser tag criancas porto, festas infantis valongo, feijoeiro magico">
+    <meta name="author" content="Associação Feijoeiro Mágico">
+    <title>Festas de Aniversário | Feijoeiro Mágico</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon using SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page Specific Premium Styling -->
+    <style>
+        .back-nav-container {
+            margin-bottom: 32px;
+        }
+
+        .back-nav-container a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 24px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: var(--transition-bounce);
+        }
+
+        .back-arrow {
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .back-nav-container a:hover .back-arrow {
+            transform: translateX(-4px);
+        }
+
+        .subpage-container {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .premium-panel {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(47, 117, 75, 0.05);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 600px) {
+            .premium-panel {
+                padding: 32px 20px;
+            }
+        }
+
+        .premium-panel::after {
+            content: '🎉';
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 7rem;
+            opacity: 0.03;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .premium-panel h2 {
+            font-size: 1.6rem;
+            color: var(--forest);
+            margin-top: 40px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        .premium-panel h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .premium-panel p {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text-main);
+            margin-bottom: 24px;
+        }
+
+        /* Facilities Grid */
+        .facility-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 24px 0 36px 0;
+        }
+
+        .facility-tag {
+            background: var(--off-white);
+            border: 1px solid rgba(47, 117, 75, 0.08);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--forest);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Animation Cards */
+        .animation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 768px) {
+            .animation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .anim-card {
+            background: var(--white);
+            border: 1px solid rgba(47, 117, 75, 0.06);
+            border-radius: 20px;
+            padding: 32px 24px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: var(--transition-bounce);
+        }
+
+        .anim-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-leaf);
+        }
+
+        .anim-icon {
+            font-size: 2.2rem;
+            background: var(--off-white);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            border: 1px solid rgba(47, 117, 75, 0.04);
+        }
+
+        .anim-card h3 {
+            font-size: 1.25rem;
+            color: var(--forest);
+            margin-bottom: 12px;
+            font-family: var(--font-heading);
+        }
+
+        .anim-card p {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* Price displays for Laser Tag */
+        .pricing-box-wrapper {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 12px;
+            width: 100%;
+        }
+
+        .price-badge {
+            background: var(--mint-light);
+            color: var(--forest);
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid rgba(76, 184, 119, 0.2);
+        }
+
+        /* Others Panel */
+        .others-panel {
+            background: linear-gradient(135deg, rgba(76, 184, 119, 0.05) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border: 1px solid rgba(76, 184, 119, 0.1);
+            border-radius: 20px;
+            padding: 32px;
+            margin-top: 36px;
+        }
+
+        .others-panel h3 {
+            font-size: 1.3rem;
+            color: var(--forest);
+            margin-bottom: 16px;
+            font-family: var(--font-heading);
+        }
+
+        .others-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        @media (max-width: 600px) {
+            .others-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .others-list li {
+            padding-left: 24px;
+            position: relative;
+            font-size: 0.98rem;
+            color: var(--text-main);
+        }
+
+        .others-list li::before {
+            content: '⭐';
+            position: absolute;
+            left: 0;
+            color: var(--sun-yellow);
+        }
+
+        .highlight-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .badge-orange {
+            background: rgba(244, 67, 54, 0.12);
+            color: #d81b60;
+        }
+
+        .btn-download-premium {
+            background: linear-gradient(135deg, var(--accent-leaf) 0%, var(--primary-green) 100%);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(76, 184, 119, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-bounce);
+        }
+
+        .btn-download-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 184, 119, 0.35);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Accessibility skip-link -->
+    <a href="#conteudo-principal" class="skip-link">Saltar para o conteúdo principal</a>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" aria-label="Feijoeiro Mágico - Página Inicial">
+                <!-- SVG Beanstalk Logo -->
+                <svg class="logo-svg" viewBox="0 0 200 60" width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(10, 5)">
+                        <!-- Beanstalk Stem -->
+                        <path d="M20,45 Q25,25 20,5" fill="none" stroke="var(--accent-leaf)" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Leaves -->
+                        <path d="M22,30 Q35,25 32,15 Q20,20 22,30" fill="var(--accent-leaf)" />
+                        <path d="M18,20 Q5,15 8,5 Q20,10 18,20" fill="var(--primary-green)" opacity="0.8" />
+                        <!-- Golden Sun -->
+                        <circle cx="20" cy="5" r="4" fill="var(--sun-yellow)" />
+                    </g>
+                    <!-- Text -->
+                    <text x="50" y="32" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" fill="var(--primary-green)">Feijoeiro</text>
+                    <text x="50" y="48" font-family="'Outfit', sans-serif" font-weight="600" font-size="14" fill="var(--accent-leaf)" letter-spacing="1">MÁGICO</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                            Instituição <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-label="Submenu Instituição">
+                            <li><a href="missao.html">Missão</a></li>
+                            <li><a href="horario.html">Horário de Funcionamento</a></li>
+                            <li><a href="sinergias.html">Sinergias</a></li>
+                            <li><a href="regulamento.html">Regulamento Interno</a></li>
+                            <li><a href="contingencia.html">Plano de Contingência</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                    <li><a href="index.html#pais">Área dos Pais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html#contactos" class="btn btn-leaf btn-small" id="header-cta">Agendar Visita</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Menu Móvel" aria-hidden="true">
+        <ul>
+            <li class="nav-item-dropdown-mobile">
+                <button class="dropdown-trigger-mobile" aria-haspopup="true" aria-expanded="false">
+                    Instituição <span class="dropdown-arrow-mobile" aria-hidden="true">▼</span>
+                </button>
+                <ul class="dropdown-menu-mobile" aria-label="Submenu Instituição Móvel">
+                    <li><a href="missao.html">Missão</a></li>
+                    <li><a href="horario.html">Horário de Funcionamento</a></li>
+                    <li><a href="sinergias.html">Sinergias</a></li>
+                    <li><a href="regulamento.html">Regulamento Interno</a></li>
+                    <li><a href="contingencia.html">Plano de Contingência</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="comunidade.html">Comunidade</a></li>
+            <li><a href="index.html#pais">Área dos Pais</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="index.html#contactos" class="btn btn-leaf btn-mobile-cta">Agendar Visita</a></li>
+        </ul>
+        <div class="mobile-nav-decor">
+            <svg viewBox="0 0 100 100" class="mobile-decor-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 Q50,40 100,80 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.3"></path>
+                <path d="M0,90 Q50,70 100,90 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.5"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="conteudo-principal" style="padding-top: 120px;">
+        <section class="section animate-scroll active" style="padding: 80px 0;">
+            <div class="subpage-container">
+                
+                <!-- Back Button -->
+                <div class="back-nav-container">
+                    <a href="servicos.html" class="btn btn-outline-leaf">
+                        <span class="back-arrow" aria-hidden="true">←</span> Voltar para Serviços
+                    </a>
+                </div>
+
+                <!-- Page Heading -->
+                <div style="margin-bottom: 40px;">
+                    <span class="highlight-badge badge-orange">🎉 Eventos & Diversão</span>
+                    <h1 class="hero-title" style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-top: 8px; margin-bottom: 16px; line-height: 1.2;">
+                        Festas de <span class="highlight">Aniversário</span>
+                    </h1>
+                </div>
+
+                <!-- Main Content Panel -->
+                <div class="premium-panel">
+                    <p>
+                        Mediante pedido e reserva prévia, podemos disponibilizar o nosso espaço lúdico! O Aniversariante pode viver a sua Festa de Sonho, entre Família e Amigos, no próprio <strong>Castelo do Feijoeiro Mágico</strong>, com pleno acesso a um conjunto premium de instalações.
+                    </p>
+
+                    <!-- Facility Tags -->
+                    <div class="facility-tags">
+                        <span class="facility-tag" aria-hidden="true">🚪 Duas Salas Equipadas</span>
+                        <span class="facility-tag" aria-hidden="true">🚽 Sanitários Dedicados</span>
+                        <span class="facility-tag" aria-hidden="true">🌳 Recreio Exterior Amplo</span>
+                        <span class="facility-tag" aria-hidden="true">🧗‍♂️ Parede de Escalada</span>
+                        <span class="facility-tag" aria-hidden="true">🎡 Parque Infantil Privativo</span>
+                    </div>
+
+                    <h2>🎂 Bolos de Aniversário Personalizados</h2>
+                    <p>
+                        Tratamos do Bolo de Aniversário personalizado e orçamentado à medida do tema da festa! Garantimos confeção deliciosa e criativa (encomendas com o mínimo de <strong>3 dias de antecedência</strong>).
+                    </p>
+
+                    <h2>🎈 Opções de Animação & Pacotes</h2>
+                    <p>
+                        Para tornar o dia verdadeiramente inesquecível, disponibilizamos pacotes de entretenimento dinâmicos de alta qualidade:
+                    </p>
+
+                    <!-- Animation Cards Grid -->
+                    <div class="animation-grid">
+                        
+                        <!-- Option 1: Insuflaveis -->
+                        <div class="anim-card">
+                            <span class="anim-icon" aria-hidden="true">🏰</span>
+                            <h3>Catálogo de Insufláveis</h3>
+                            <p>Temos disponíveis diversos insufláveis homologados e seguros de dimensões <strong>S a XXL</strong> para aluguer sob consulta prévia.</p>
+                            <a href="#" class="btn-download-premium btn-download" data-file="Catalogo_Insuflaveis_FeijoeiroMagico.pdf">
+                                <span class="btn-text">📄 Consultar Catálogo (PDF)</span>
+                                <span class="progress-bar"></span>
+                            </a>
+                        </div>
+
+                        <!-- Option 2: Laser Tag -->
+                        <div class="anim-card">
+                            <span class="anim-icon" aria-hidden="true">🔫</span>
+                            <h3>Jogos de Laser Tag</h3>
+                            <p>Jogos cooperativos e competitivos dinâmicos ao ar livre. Duração de 1 a 2 horas (dos 5 aos 100 anos, mínimo 8 participantes).</p>
+                            <div class="pricing-box-wrapper">
+                                <span class="price-badge">1 Hora: 10€/criança</span>
+                                <span class="price-badge">2 Horas: 12€/criança</span>
+                            </div>
+                            <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px; font-weight: 500;">
+                                💡 Orçamentos especiais para mais de 16 elementos.
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Option 3: Others Panel -->
+                    <div class="others-panel">
+                        <h3>⭐ Outras Opções de Animação (sob orçamento)</h3>
+                        <ul class="others-list">
+                            <li>Animador especializado em pinturas faciais e balões</li>
+                            <li>Mágico profissional</li>
+                            <li>Palhaços e teatro de fantoches</li>
+                            <li>Atividade especial "A Quinta vai à Escola"</li>
+                            <li>Espetáculos de Teatro Infantil personalizados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Separator / Quick Contacts Call -->
+                <div style="text-align: center; margin-top: 32px; margin-bottom: 20px;">
+                    <a href="index.html#contactos" class="btn btn-leaf btn-large">💬 Reservar Data & Solicitar Orçamento</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-curved-background">
+            <svg class="footer-silhouette-svg" viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,50 Q200,80 400,60 T800,50 T1200,70 T1440,60 L1440,100 L0,100 Z" fill="var(--forest-dark)"/>
+            </svg>
+        </div>
+
+        <div class="container footer-content-container">
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">🌱 Feijoeiro Mágico</div>
+                    <p class="footer-tagline">Uma comunidade acolhedora sob gestão dedicada da Associação Feijoeiro Mágico no histórico Infantário S. Vicente de Alfena. Ajudamos a sonhar e a germinar o saber ecológico.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook" class="social-icon-btn">📘</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="social-icon-btn">📸</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Youtube" class="social-icon-btn">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html#projeto" class="footer-link">Projeto Pedagógico</a></li>
+                        <li><a href="servicos.html" class="footer-link">Serviços</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Ementas da Semana</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Cofre de Documentos</a></li>
+                        <li><a href="contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-legal-col">
+                    <h4>Legislação & Informação</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Políticas de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Política de Cookies</a></li>
+                        <li><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" class="footer-link">Livro de Reclamações</a></li>
+                        <li><a href="#" class="footer-link">Ficha Técnica da Licença</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 Associação Feijoeiro Mágico (Infantário S. Vicente). Todos os direitos reservados.</p>
+                <p class="footer-credit">Desenhado com 💚 para as nossas queridas crianças.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Comunidade do Feijoeiro Mágico - Infantário S. Vicente em Alfena. Testemunhos de carinho das nossas famílias e espaço para partilhar as suas mensagens.">
+    <meta name="keywords" content="comunidade feijoeiro magico, testemunhos feijoeiro, infantario sao vicente, creche alfena, jardim infancia valongo">
+    <meta name="author" content="Associação Feijoeiro Mágico">
+    <title>Comunidade & Testemunhos | Feijoeiro Mágico</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon using SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Embedded Premium Page Styles -->
+    <style>
+        /* True CSS Masonry Layout */
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 24px;
+            width: 100%;
+        }
+        
+        @media (max-width: 1024px) {
+            .masonry-grid {
+                column-count: 2;
+                column-gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+        
+        /* Testimonial Card */
+        .testimonial-card {
+            break-inside: avoid;
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(76, 184, 119, 0.05);
+            padding: 32px;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(76, 184, 119, 0.25);
+        }
+        
+        /* Elegant Decorative Quotation Mark */
+        .testimonial-quote-icon {
+            font-size: 7rem;
+            line-height: 1;
+            color: var(--mint-light);
+            opacity: 0.4;
+            position: absolute;
+            top: -20px;
+            right: 15px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .testimonial-text {
+            font-family: var(--font-body);
+            font-size: 1.02rem;
+            color: var(--text-main);
+            line-height: 1.65;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+        }
+        
+        /* Author Block */
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid hsl(145, 60%, 94%);
+            padding-top: 16px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .author-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--mint-light), var(--accent-leaf));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--forest);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .author-name {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--forest);
+        }
+        
+        .author-role {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        /* Form Inputs Styling overrides */
+        textarea:focus, input[type="text"]:focus {
+            border-color: var(--accent-leaf) !important;
+            box-shadow: 0 0 0 4px rgba(76, 184, 119, 0.15) !important;
+            background-color: var(--white) !important;
+        }
+        
+        /* Anonymity checked state visual effects */
+        .input-disabled {
+            opacity: 0.5;
+            background-color: hsl(143, 20%, 94%) !important;
+            border-color: hsl(143, 20%, 90%) !important;
+            pointer-events: none;
+            color: var(--text-muted) !important;
+        }
+        
+        /* Custom Keyframe Animations */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes bounceFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Accessibility skip-link -->
+    <a href="#conteudo-principal" class="skip-link">Saltar para o conteúdo principal</a>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" aria-label="Feijoeiro Mágico - Página Inicial">
+                <!-- SVG Beanstalk Logo -->
+                <svg class="logo-svg" viewBox="0 0 200 60" width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(10, 5)">
+                        <!-- Beanstalk Stem -->
+                        <path d="M20,45 Q25,25 20,5" fill="none" stroke="var(--accent-leaf)" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Leaves -->
+                        <path d="M22,30 Q35,25 32,15 Q20,20 22,30" fill="var(--accent-leaf)" />
+                        <path d="M18,20 Q5,15 8,5 Q20,10 18,20" fill="var(--primary-green)" opacity="0.8" />
+                        <!-- Golden Sun -->
+                        <circle cx="20" cy="5" r="4" fill="var(--sun-yellow)" />
+                    </g>
+                    <!-- Text -->
+                    <text x="50" y="32" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" fill="var(--primary-green)">Feijoeiro</text>
+                    <text x="50" y="48" font-family="'Outfit', sans-serif" font-weight="600" font-size="14" fill="var(--accent-leaf)" letter-spacing="1">MÁGICO</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                            Instituição <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-label="Submenu Instituição">
+                            <li><a href="missao.html">Missão</a></li>
+                            <li><a href="horario.html">Horário de Funcionamento</a></li>
+                            <li><a href="sinergias.html">Sinergias</a></li>
+                            <li><a href="regulamento.html">Regulamento Interno</a></li>
+                            <li><a href="contingencia.html">Plano de Contingência</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="comunidade.html" class="active" style="color: var(--accent-leaf); font-weight: 600;">Comunidade</a></li>
+                    <li><a href="index.html#pais">Área dos Pais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html#contactos" class="btn btn-leaf btn-small" id="header-cta">Agendar Visita</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Menu Móvel" aria-hidden="true">
+        <ul>
+            <li class="nav-item-dropdown-mobile">
+                <button class="dropdown-trigger-mobile" aria-haspopup="true" aria-expanded="false">
+                    Instituição <span class="dropdown-arrow-mobile" aria-hidden="true">▼</span>
+                </button>
+                <ul class="dropdown-menu-mobile" aria-label="Submenu Instituição Móvel">
+                    <li><a href="missao.html">Missão</a></li>
+                    <li><a href="horario.html">Horário de Funcionamento</a></li>
+                    <li><a href="sinergias.html">Sinergias</a></li>
+                    <li><a href="regulamento.html">Regulamento Interno</a></li>
+                    <li><a href="contingencia.html">Plano de Contingência</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="comunidade.html" style="color: var(--accent-leaf); font-weight: 600;">Comunidade</a></li>
+            <li><a href="index.html#pais">Área dos Pais</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="index.html#contactos" class="btn btn-leaf btn-mobile-cta">Agendar Visita</a></li>
+        </ul>
+        <div class="mobile-nav-decor">
+            <svg viewBox="0 0 100 100" class="mobile-decor-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 Q50,40 100,80 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.3"></path>
+                <path d="M0,90 Q50,70 100,90 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.5"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="conteudo-principal" style="padding-top: 120px;">
+        <section class="section animate-scroll active" style="padding: 60px 0;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                
+                <!-- Tagline & Heading -->
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <span class="hero-tagline" style="display: inline-block; background: var(--mint-light); color: var(--primary-green); padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; font-family: var(--font-heading);">💖 Comunidade Feijoeiro</span>
+                    <h1 class="hero-title" style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-top: 16px; margin-bottom: 16px; line-height: 1.2; font-family: var(--font-heading); color: var(--forest); font-weight: 800;">
+                        O que as Famílias <span style="color: var(--accent-leaf);">têm a partilhar</span>
+                    </h1>
+                    <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; line-height: 1.6;">
+                        Conheça os testemunhos reais e carinhosos de quem vive e confia no nosso projeto educativo diariamente.
+                    </p>
+                </div>
+
+                <!-- SECTION 1: Testimonials Masonry Grid -->
+                <div class="masonry-grid" style="margin-bottom: 80px;">
+                    
+                    <!-- Card 1 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “É maravilhoso poder espreitar os nossos filhos e ver a alegria nos seus olhos, os seus sorrisos, estas fotos são um descanso para a alma! Obrigado por todo empenho e dedicação. Parabéns e continuem o bom trabalho!”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍👩‍👦</div>
+                            <div class="author-info">
+                                <span class="author-name">César Gonçalves</span>
+                                <span class="author-role">Encarregado de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “Congratulo o ISV deste seu feito, como mãe agradeço poder me ser dada a oportunidade para desta forma acompanhar mais de perto o mundo do meu filho na sua comunidade escolar. Bem-hajam e continuem o V/ bom trabalho!”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍👦</div>
+                            <div class="author-info">
+                                <span class="author-name">Marta Gonçalves</span>
+                                <span class="author-role">Encarregada de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “A festa foi muito bonita, muito bem organizada as crianças estavam tão felizes e divertidas. Um bem haja para toda a equipa do Infantário São Vicente. Alegria dos nossos filhos também é a nossa. Muito obrigada a todos. Um feliz Ano Novo”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍👧‍👦</div>
+                            <div class="author-info">
+                                <span class="author-name">Sílvia Abreu</span>
+                                <span class="author-role">Encarregada de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “É emocionante ver os nossos filhos no seu local do “trabalho”. Sente-se no olhar e nos sorrisos que as fotos revelam, a alegria e satisfação com que desempenham as funções e desafios que lhes são propostos! É uma alegria, um prazer imenso, um descanso para a alma, vermos como diariamente os nossos filhos são tão bem acompanhados por todas as magníficas pessoas que constituem a equipa do Feijoeiro Mágico – Infantários São Vicente! A todos um grande bem haja!”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍👩‍👧‍👦</div>
+                            <div class="author-info">
+                                <span class="author-name">César Mendes</span>
+                                <span class="author-role">Encarregado de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “Mesmo que a palavra ‘obrigada’ pareça pequena para expressar a imensa gratidão que sinto pelo carinho, paciência e dedicação diária com que cuidam do meu tesouro. A equipa do Feijoeiro Mágico consegue criar um ambiente tão seguro e caloroso que nos sentimos verdadeiramente em família. O acolhimento é único e maravilhoso!”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍👧</div>
+                            <div class="author-info">
+                                <span class="author-name">Cátia Silva</span>
+                                <span class="author-role">Encarregada de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “Ver o desenvolvimento do meu filho, a sua autonomia a crescer de dia para dia e o entusiasmo com que me fala do projeto pedagógico e das atividades da horta biológica é a maior prova do vosso excelente trabalho. O contacto com a terra e com os ciclos naturais no vosso pátio verde é absolutamente inspirador!”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍👦</div>
+                            <div class="author-info">
+                                <span class="author-name">Rui Santos</span>
+                                <span class="author-role">Encarregado de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “A transição para a Creche era um momento de grande ansiedade para nós, mas a vossa equipa foi tão calorosa e o acolhimento tão personalizado que nos sentimos seguros desde o primeiro segundo. Obrigado por fazerem deste espaço um segundo lar cheio de sorrisos sinceros e abraços apertados.”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👵</div>
+                            <div class="author-info">
+                                <span class="author-name">Filomena Neves</span>
+                                <span class="author-role">Avó Feijoeiro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “As atividades extracurriculares são fantásticas! A minha filha adora a Robótica e o Yoga, e tem sido incrível ver a sua evolução cognitiva e motora. O Feijoeiro Mágico oferece um ensino verdadeiramente completo, estimulante, inclusivo e moderno, que respeita o ritmo individual de cada criança.”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍⚕️</div>
+                            <div class="author-info">
+                                <span class="author-name">Beatriz Rocha</span>
+                                <span class="author-role">Encarregada de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “É extraordinário o vosso compromisso com a ecologia e com valores de sustentabilidade ativa. Ensinar os nossos filhos a respeitar a natureza, as plantas e os animais desde tenra idade no Infantário S. Vicente é, sem dúvida, o melhor legado que podemos deixar para o futuro do nosso planeta.”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨&zwj;👩&zwj;👧</div>
+                            <div class="author-info">
+                                <span class="author-name">Ricardo Ferreira</span>
+                                <span class="author-role">Encarregado de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “Parabéns pelo vosso excelente trabalho, estou maravilhada com o empenho, com a dinâmica e organização… Desejo todo os sucesso que merecem e que certamente vão ter, pois acredito que o trabalho compensa…”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩</div>
+                            <div class="author-info">
+                                <span class="author-name">Elisabete Santos</span>
+                                <span class="author-role">Encarregada de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 11 -->
+                    <div class="testimonial-card">
+                        <span class="testimonial-quote-icon">“</span>
+                        <p class="testimonial-text">
+                            “Parabéns pelo trabalho demonstrado em tão pouco tempo. Espero que continuem assim. Muito sucesso e felicidades.”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍🦰</div>
+                            <div class="author-info">
+                                <span class="author-name">Paula Morais</span>
+                                <span class="author-role">Encarregada de Educação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Horizontal Separator -->
+                <div style="text-align: center; margin-bottom: 80px;">
+                    <hr style="border: none; height: 2px; background: linear-gradient(to right, transparent, var(--mint-light), transparent); max-width: 600px; margin: 0 auto;">
+                </div>
+
+                <!-- SECTION 2: Share and Questions Form -->
+                <div class="form-container-box" style="max-width: 800px; margin: 0 auto; background: var(--white); border-radius: 30px; box-shadow: var(--shadow-md); padding: 45px; border: 1px solid rgba(76, 184, 119, 0.15); position: relative; overflow: hidden;">
+                    
+                    <div style="text-align: center; margin-bottom: 35px;">
+                        <span style="font-size: 2.5rem; display: block; margin-bottom: 10px; animation: bounceFloat 3s ease-in-out infinite;">🌱</span>
+                        <h2 style="font-family: var(--font-heading); color: var(--forest); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 10px;">
+                            Cultivar Partilhas
+                        </h2>
+                        <p style="color: var(--text-muted); font-size: 1rem; max-width: 550px; margin: 0 auto; line-height: 1.6;">
+                            Deseja deixar uma mensagem de carinho para a nossa equipa, colocar uma questão ou partilhar o seu próprio testemunho? Envie uma semente de partilha direto para o nosso Castelo!
+                        </p>
+                    </div>
+
+                    <form id="comunidade-partilha-form" style="display: flex; flex-direction: column; gap: 24px; position: relative; z-index: 2;">
+                        
+                        <!-- Textarea Message -->
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="form-mensagem" style="font-family: var(--font-heading); font-weight: 600; color: var(--forest); font-size: 0.95rem;">
+                                A sua Mensagem, Pergunta ou Testemunho <span style="color: red;">*</span>
+                            </label>
+                            <textarea id="form-mensagem" name="mensagem" required placeholder="Escreva aqui a sua mensagem com carinho..." style="font-family: var(--font-body); font-size: 1rem; color: var(--text-main); padding: 15px 20px; border-radius: 16px; border: 2px solid var(--mint-light); background-color: var(--off-white); min-height: 160px; resize: vertical; transition: border-color 0.3s ease, box-shadow 0.3s ease; outline: none;"></textarea>
+                        </div>
+
+                        <!-- Name and Anonymity Box (Flex Row) -->
+                        <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end;">
+                            
+                            <!-- Name Input -->
+                            <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 8px;" id="nome-input-wrapper">
+                                <label for="form-nome" style="font-family: var(--font-heading); font-weight: 600; color: var(--forest); font-size: 0.95rem; transition: opacity 0.3s ease;">
+                                    O seu Nome (opcional)
+                                </label>
+                                <input type="text" id="form-nome" name="nome" placeholder="Ex: Maria Silva" style="font-family: var(--font-body); font-size: 1rem; color: var(--text-main); padding: 12px 20px; border-radius: 12px; border: 2px solid var(--mint-light); background-color: var(--white); transition: border-color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, color 0.3s ease; outline: none;">
+                            </div>
+
+                            <!-- Anonymity Checkbox -->
+                            <div style="display: flex; align-items: center; min-height: 50px;">
+                                <label class="checkbox-container" style="display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.95rem; color: var(--text-main); font-weight: 500; user-select: none;">
+                                    <input type="checkbox" id="form-anonimo" name="anonimo" style="width: 20px; height: 20px; border-radius: 6px; border: 2px solid var(--accent-leaf); cursor: pointer; accent-color: var(--accent-leaf);">
+                                    <span>Quero enviar esta mensagem de forma anónima</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div style="text-align: center; margin-top: 15px;">
+                            <button type="submit" class="btn btn-leaf btn-large" style="min-width: 260px; font-size: 1.1rem; border: none; box-shadow: 0 8px 25px rgba(76, 184, 119, 0.3);">
+                                Enviar para o Castelo 🌟
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <!-- Success State Overlay -->
+                    <div id="success-overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--white); z-index: 10; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; border-radius: 30px; animation: fadeInScale 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
+                        <!-- Animated Plant growth SVG -->
+                        <div style="margin-bottom: 20px; animation: bounceFloat 3s ease-in-out infinite;">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="45" fill="var(--mint-light)" />
+                                <path d="M50,80 Q55,50 50,25" fill="none" stroke="var(--accent-leaf)" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M52,50 Q65,45 62,35 Q50,40 52,50" fill="var(--accent-leaf)" />
+                                <path d="M48,40 Q35,35 38,25 Q50,30 48,40" fill="var(--primary-green)" />
+                                <circle cx="50" cy="25" r="5" fill="var(--sun-yellow)" />
+                            </svg>
+                        </div>
+                        <h3 style="font-family: var(--font-heading); color: var(--forest); font-size: 2rem; font-weight: 800; margin-bottom: 12px;">
+                            Semente Plantada com Sucesso! 🌟
+                        </h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 500px; line-height: 1.6; margin-bottom: 24px;">
+                            A sua semente de partilha foi recolhida pelas asas do Feijoeiro Mágico e plantada com muito amor no coração do nosso Castelo Mágico. Obrigado por fazer brilhar a nossa comunidade escolar!
+                        </p>
+                        <button id="success-back-btn" class="btn btn-outline-leaf" style="padding: 10px 24px; border-radius: 20px; border: 2px solid var(--accent-leaf); color: var(--forest); font-weight: 600;">
+                            Escrever Outra Mensagem
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-curved-background">
+            <svg class="footer-silhouette-svg" viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,50 Q200,80 400,60 T800,50 T1200,70 T1440,60 L1440,100 L0,100 Z" fill="var(--forest-dark)"/>
+            </svg>
+        </div>
+
+        <div class="container footer-content-container">
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">🌱 Feijoeiro Mágico</div>
+                    <p class="footer-tagline">Uma comunidade acolhedora sob gestão dedicada da Associação Feijoeiro Mágico no histórico Infantário S. Vicente de Alfena. Ajudamos a sonhar e a germinar o saber ecológico.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook" class="social-icon-btn">📘</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="social-icon-btn">📸</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Youtube" class="social-icon-btn">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html#projeto" class="footer-link">Projeto Pedagógico</a></li>
+                        <li><a href="servicos.html" class="footer-link">Serviços</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Ementas da Semana</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Cofre de Documentos</a></li>
+                        <li><a href="contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-legal-col">
+                    <h4>Legislação & Informação</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Políticas de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Política de Cookies</a></li>
+                        <li><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" class="footer-link">Livro de Reclamações</a></li>
+                        <li><a href="#" class="footer-link">Ficha Técnica da Licença</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 Associação Feijoeiro Mágico (Infantário S. Vicente). Todos os direitos reservados.</p>
+                <p class="footer-credit">Desenhado com 💚 para as nossas queridas crianças.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>

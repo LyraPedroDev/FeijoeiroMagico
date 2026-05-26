@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Regulamento Interno, Preçários e Linha Pedagógica da Associação Feijoeiro Mágico - Infantário S. Vicente em Alfena. Conheça as nossas diretrizes, preçários e o nosso Projeto Educativo.">
+    <meta name="keywords" content="regulamento feijoeiro magico, projeto educativo feijoeiro magico, precarios creche alfena, precario jardim infancia, seguro escolar feijoeiro magico">
+    <meta name="author" content="Associação Feijoeiro Mágico">
+    <title>Regulamento & Projeto Educativo | Feijoeiro Mágico</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon using SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page Specific Premium Styling -->
+    <style>
+        .regulamento-intro {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(47, 117, 75, 0.05);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .regulamento-intro::after {
+            content: '📄';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 6rem;
+            opacity: 0.04;
+            pointer-events: none;
+            user-select: none;
+        }
+        .regulamento-intro p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        /* Grid for primary downloads */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+        @media (max-width: 480px) {
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .download-card {
+            background: var(--white);
+            padding: 32px 24px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(47, 117, 75, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: var(--transition-bounce);
+            position: relative;
+            overflow: hidden;
+        }
+        .download-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-leaf) 0%, var(--primary-green) 100%);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+        .download-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-leaf);
+        }
+        .download-card:hover::before {
+            opacity: 1;
+        }
+        .download-card .icon-wrapper {
+            width: 64px;
+            height: 64px;
+            background: var(--mint-light);
+            color: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            transition: var(--transition-smooth);
+        }
+        .download-card:hover .icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        .download-card h3 {
+            font-size: 1.3rem;
+            color: var(--forest);
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        .download-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        /* Full Width Seguro Banner */
+        .seguro-banner {
+            background: linear-gradient(135deg, rgba(255, 213, 79, 0.05) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border: 1px solid rgba(255, 213, 79, 0.25);
+            border-radius: 20px;
+            padding: 32px;
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            box-shadow: var(--shadow-sm);
+        }
+        @media (max-width: 768px) {
+            .seguro-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+                gap: 24px;
+            }
+        }
+        .seguro-text {
+            flex: 1;
+        }
+        .seguro-title {
+            font-size: 1.4rem;
+            color: var(--forest);
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        @media (max-width: 768px) {
+            .seguro-title {
+                justify-content: center;
+            }
+        }
+        .seguro-text p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-main);
+            margin: 0;
+        }
+        .seguro-card-btn {
+            flex: 0 0 280px;
+            width: 100%;
+        }
+
+        /* Section 2: Pedagogica Panel */
+        .pedagogica-panel {
+            background: linear-gradient(135deg, rgba(76, 184, 119, 0.04) 0%, rgba(198, 228, 240, 0.2) 100%);
+            border: 1px solid rgba(47, 117, 75, 0.08);
+            border-radius: 24px;
+            padding: 44px 40px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 48px;
+            box-shadow: var(--shadow-sm);
+        }
+        @media (max-width: 600px) {
+            .pedagogica-panel {
+                padding: 30px 20px;
+            }
+        }
+        .pedagogica-panel::after {
+            content: '🌱';
+            position: absolute;
+            bottom: -20px;
+            right: -10px;
+            font-size: 8rem;
+            opacity: 0.03;
+            pointer-events: none;
+            user-select: none;
+        }
+        .pedagogica-panel h2 {
+            font-size: 1.75rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+        }
+        .pedagogica-panel p {
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: var(--text-main);
+            text-align: justify;
+            margin: 0;
+        }
+
+        /* Complaints book seal */
+        .reclama-seal-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 56px;
+            padding-top: 32px;
+            border-top: 1px dashed rgba(47, 117, 75, 0.15);
+        }
+        .reclama-seal {
+            background: var(--white);
+            border: 1px solid rgba(47, 117, 75, 0.1);
+            border-radius: 16px;
+            padding: 18px 28px;
+            box-shadow: var(--shadow-sm);
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            transition: var(--transition-bounce);
+            max-width: 520px;
+            width: 100%;
+        }
+        .reclama-seal:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-leaf);
+        }
+        .reclama-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+            animation: floatIcon 3s ease-in-out infinite;
+        }
+        .reclama-info {
+            text-align: left;
+            flex: 1;
+        }
+        .reclama-info h4 {
+            font-size: 0.95rem;
+            color: var(--forest);
+            margin-bottom: 4px;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        .reclama-info p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        .reclama-link {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-leaf);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition-smooth);
+        }
+        .reclama-seal:hover .reclama-link {
+            color: var(--primary-green);
+        }
+        .reclama-link::after {
+            content: '→';
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .reclama-seal:hover .reclama-link::after {
+            transform: translateX(3px);
+        }
+
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        @media (max-width: 600px) {
+            .reclama-seal {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+            }
+            .reclama-info {
+                text-align: center;
+            }
+            .reclama-link {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Accessibility skip-link -->
+    <a href="#conteudo-principal" class="skip-link">Saltar para o conteúdo principal</a>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" aria-label="Feijoeiro Mágico - Página Inicial">
+                <!-- SVG Beanstalk Logo -->
+                <svg class="logo-svg" viewBox="0 0 200 60" width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(10, 5)">
+                        <!-- Beanstalk Stem -->
+                        <path d="M20,45 Q25,25 20,5" fill="none" stroke="var(--accent-leaf)" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Leaves -->
+                        <path d="M22,30 Q35,25 32,15 Q20,20 22,30" fill="var(--accent-leaf)" />
+                        <path d="M18,20 Q5,15 8,5 Q20,10 18,20" fill="var(--primary-green)" opacity="0.8" />
+                        <!-- Golden Sun -->
+                        <circle cx="20" cy="5" r="4" fill="var(--sun-yellow)" />
+                    </g>
+                    <!-- Text -->
+                    <text x="50" y="32" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" fill="var(--primary-green)">Feijoeiro</text>
+                    <text x="50" y="48" font-family="'Outfit', sans-serif" font-weight="600" font-size="14" fill="var(--accent-leaf)" letter-spacing="1">MÁGICO</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                            Instituição <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-label="Submenu Instituição">
+                            <li><a href="missao.html">Missão</a></li>
+                            <li><a href="horario.html">Horário de Funcionamento</a></li>
+                            <li><a href="sinergias.html">Sinergias</a></li>
+                            <li><a href="regulamento.html">Regulamento Interno</a></li>
+                            <li><a href="contingencia.html">Plano de Contingência</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                    <li><a href="index.html#pais">Área dos Pais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html#contactos" class="btn btn-leaf btn-small" id="header-cta">Agendar Visita</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Menu Móvel" aria-hidden="true">
+        <ul>
+            <li class="nav-item-dropdown-mobile">
+                <button class="dropdown-trigger-mobile" aria-haspopup="true" aria-expanded="false">
+                    Instituição <span class="dropdown-arrow-mobile" aria-hidden="true">▼</span>
+                </button>
+                <ul class="dropdown-menu-mobile" aria-label="Submenu Instituição Móvel">
+                    <li><a href="missao.html">Missão</a></li>
+                    <li><a href="horario.html">Horário de Funcionamento</a></li>
+                    <li><a href="sinergias.html">Sinergias</a></li>
+                    <li><a href="regulamento.html">Regulamento Interno</a></li>
+                    <li><a href="contingencia.html">Plano de Contingência</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="comunidade.html">Comunidade</a></li>
+            <li><a href="index.html#pais">Área dos Pais</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="index.html#contactos" class="btn btn-leaf btn-mobile-cta">Agendar Visita</a></li>
+        </ul>
+        <div class="mobile-nav-decor">
+            <svg viewBox="0 0 100 100" class="mobile-decor-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 Q50,40 100,80 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.3"></path>
+                <path d="M0,90 Q50,70 100,90 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.5"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="conteudo-principal" style="padding-top: 120px;">
+        <section class="section animate-scroll active" style="padding: 80px 0;">
+            <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+                
+                <!-- Tagline & Heading -->
+                <div style="text-align: center; margin-bottom: 48px;">
+                    <span class="hero-tagline" style="display: inline-block;">📄 Normativos & Diretrizes</span>
+                    <h1 class="hero-title" style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-top: 16px; margin-bottom: 24px; line-height: 1.2;">
+                        Regulamento & <span class="highlight">Projeto Educativo</span>
+                    </h1>
+                </div>
+
+                <!-- SECTION 1: Regulamento Interno e Preçários -->
+                <div>
+                    <h2 style="font-size: 1.6rem; color: var(--forest); margin-bottom: 20px; font-weight: 700; font-family: var(--font-heading); display: flex; align-items: center; gap: 10px;">
+                        <span>📂</span> Regulamento Interno e Preçários
+                    </h2>
+                    
+                    <div class="regulamento-intro">
+                        <p>
+                            O Regulamento Interno é o conjunto de normativos que define o modo de funcionamento desta Instituição, informando também acerca de todos os direitos e deveres de quem faz parte do Abraço desta Comunidade Educativa. Está disponível para consulta no gabinete da Direção da Associação Feijoeiro Mágico e através dos links disponibilizados abaixo. A inscrição/matrícula de uma criança em qualquer uma das valências da Associação Feijoeiro Mágico pressupõe a aceitação e o cumprimento de todos os seus pontos.
+                        </p>
+                    </div>
+
+                    <!-- Download Cards Grid -->
+                    <div class="download-grid">
+                        
+                        <!-- Card 1: Creche -->
+                        <div class="download-card">
+                            <div class="icon-wrapper">👶</div>
+                            <h3>Creche</h3>
+                            <p>Regulamento Interno e Preçário – Resposta Social de Creche. Consulte as normas e valores de inscrição para os mais pequenos.</p>
+                            <a href="#" class="btn btn-leaf btn-download">
+                                📥 Descarregar Regulamento
+                            </a>
+                        </div>
+
+                        <!-- Card 2: Jardim de Infância -->
+                        <div class="download-card">
+                            <div class="icon-wrapper">🏰</div>
+                            <h3>Jardim de Infância</h3>
+                            <p>Regulamento Interno e Preçário – Valências de Jardim-de-Infância e Apoio à Família. Todas as diretrizes para a educação pré-escolar.</p>
+                            <a href="#" class="btn btn-leaf btn-download">
+                                📥 Descarregar Regulamento
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Seguro Escolar Banner -->
+                    <div class="seguro-banner">
+                        <div class="seguro-text">
+                            <h3 class="seguro-title">🛡️ Seguro Escolar</h3>
+                            <p>
+                                Associado à frequência de cada Feijão nas diferentes valências da Associação Feijoeiro Mágico, é subscrita uma Apólice de Seguro de Acidentes Pessoais, que garante o cumprimento da legislação em vigor relativamente à cobertura de sinistros. A apólice de seguro e as suas condições de cobertura detalhadas estão disponíveis para consulta no seguinte link de download:
+                            </p>
+                        </div>
+                        <div class="seguro-card-btn">
+                            <div class="download-card" style="margin: 0; padding: 24px; border-radius: 16px;">
+                                <div class="icon-wrapper" style="width: 48px; height: 48px; font-size: 1.4rem; margin-bottom: 12px;">📄</div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Condições de Seguro</h3>
+                                <p style="font-size: 0.85rem; margin-bottom: 16px;">Apólice de Seguro de Acidentes Pessoais</p>
+                                <a href="#" class="btn btn-leaf btn-download" style="padding: 10px 16px; font-size: 0.85rem;">
+                                    📥 Descarregar Seguro
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: Linha Pedagógica e Projeto Educativo -->
+                <div class="pedagogica-panel">
+                    <h2>🌱 Linha Pedagógica e Projeto Educativo</h2>
+                    <p>
+                        A Pedagogia que é praticada pela equipa da Associação Feijoeiro Mágico assenta na diversidade de experiências e estímulos que, partilhados com orientação pedagógica, potenciam a acomodação de aprendizagens significativas e cativam valores morais e emocionais altruístas! A educação, para nós, faz sentido quando possibilita, em simultâneo, o autoconhecimento e o conhecimento do mundo e dos outros… quando potencia a globalidade das competências (cognitivas, motoras e emocionais), destrezas e gostos com que cada criança vai construindo a sua personalidade e o seu percurso, num laço que se quer preenchido de boas energias, que faça sentido entre Instituição e Famílias… bem como com a “vontade de cuidar” que se vai sentindo emergente no Mundo atual em que vivemos.
+                        <br><br>
+                        É esta a linha pedagógica que sustenta a nossa Missão, o nosso trabalho… e o nosso Projeto Educativo.
+                    </p>
+                </div>
+
+                <!-- Back to Home Button -->
+                <div style="text-align: center; margin-top: 48px;">
+                    <a href="index.html" class="btn btn-leaf btn-large">🌱 Voltar à Página Principal</a>
+                </div>
+
+                <!-- Selo do Livro de Reclamações Eletrónico -->
+                <div class="reclama-seal-container">
+                    <div class="reclama-seal">
+                        <div class="reclama-icon">📘</div>
+                        <div class="reclama-info">
+                            <h4>Livro de Reclamações Eletrónico</h4>
+                            <p>Esta entidade dispõe de livro de reclamações eletrónico. Aceda à plataforma oficial para apresentar a sua reclamação ou sugestão de forma rápida.</p>
+                            <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" class="reclama-link">
+                                Aceder ao Livro de Reclamações
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-curved-background">
+            <svg class="footer-silhouette-svg" viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,50 Q200,80 400,60 T800,50 T1200,70 T1440,60 L1440,100 L0,100 Z" fill="var(--forest-dark)"/>
+            </svg>
+        </div>
+
+        <div class="container footer-content-container">
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">🌱 Feijoeiro Mágico</div>
+                    <p class="footer-tagline">Uma comunidade acolhedora sob gestão dedicada da Associação Feijoeiro Mágico no histórico Infantário S. Vicente de Alfena. Ajudamos a sonhar e a germinar o saber ecológico.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook" class="social-icon-btn">📘</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="social-icon-btn">📸</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Youtube" class="social-icon-btn">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html#projeto" class="footer-link">Projeto Pedagógico</a></li>
+                        <li><a href="servicos.html" class="footer-link">Serviços</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Ementas da Semana</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Cofre de Documentos</a></li>
+                        <li><a href="contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-legal-col">
+                    <h4>Legislação & Informação</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Políticas de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Política de Cookies</a></li>
+                        <li><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" class="footer-link">Livro de Reclamações</a></li>
+                        <li><a href="#" class="footer-link">Ficha Técnica da Licença</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 Associação Feijoeiro Mágico (Infantário S. Vicente). Todos os direitos reservados.</p>
+                <p class="footer-credit">Desenhado com 💚 para as nossas queridas crianças.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>

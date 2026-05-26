@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creche S. Vicente da Associação Feijoeiro Mágico. Espaço pensado para a estimulação pedagógica e o afeto de crianças dos 4 aos 36 meses.">
+    <meta name="keywords" content="creche alfena, infantario sao vicente, baby signs portugal, adaptacao creche, feijoeiro magico">
+    <meta name="author" content="Associação Feijoeiro Mágico">
+    <title>Creche S. Vicente | Feijoeiro Mágico</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon using SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page Specific Premium Styling -->
+    <style>
+        .back-nav-container {
+            margin-bottom: 32px;
+        }
+
+        .back-nav-container a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 24px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: var(--transition-bounce);
+        }
+
+        .back-arrow {
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .back-nav-container a:hover .back-arrow {
+            transform: translateX(-4px);
+        }
+
+        .subpage-container {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .premium-panel {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(47, 117, 75, 0.05);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 600px) {
+            .premium-panel {
+                padding: 32px 20px;
+            }
+        }
+
+        .premium-panel::after {
+            content: '🧸';
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 7rem;
+            opacity: 0.03;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .premium-panel h2 {
+            font-size: 1.6rem;
+            color: var(--forest);
+            margin-top: 40px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        .premium-panel h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .premium-panel p {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text-main);
+            margin-bottom: 24px;
+        }
+
+        .lema-quote-box {
+            background: linear-gradient(135deg, var(--mint-light) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border-left: 5px solid var(--accent-leaf);
+            border-radius: 4px 20px 20px 4px;
+            padding: 24px 32px;
+            margin: 32px 0;
+        }
+
+        .lema-quote-box h3 {
+            font-size: 1.2rem;
+            color: var(--forest);
+            margin-bottom: 8px;
+            font-family: var(--font-heading);
+        }
+
+        .lema-quote-box p {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--forest-light);
+            margin-bottom: 0;
+            line-height: 1.7;
+        }
+
+        .baby-signs-banner {
+            background: linear-gradient(135deg, rgba(255, 213, 79, 0.15) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border: 1px dashed rgba(255, 143, 0, 0.3);
+            border-radius: 20px;
+            padding: 32px;
+            margin: 36px 0;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        @media (max-width: 600px) {
+            .baby-signs-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+            }
+        }
+
+        .baby-signs-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+            background: var(--white);
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .baby-signs-text h3 {
+            font-size: 1.25rem;
+            color: var(--forest);
+            margin-bottom: 8px;
+            font-family: var(--font-heading);
+        }
+
+        .baby-signs-text p {
+            font-size: 0.98rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+            color: var(--text-main);
+        }
+
+        .highlight-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .badge-pink {
+            background: rgba(255, 182, 193, 0.25);
+            color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Accessibility skip-link -->
+    <a href="#conteudo-principal" class="skip-link">Saltar para o conteúdo principal</a>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" aria-label="Feijoeiro Mágico - Página Inicial">
+                <!-- SVG Beanstalk Logo -->
+                <svg class="logo-svg" viewBox="0 0 200 60" width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(10, 5)">
+                        <!-- Beanstalk Stem -->
+                        <path d="M20,45 Q25,25 20,5" fill="none" stroke="var(--accent-leaf)" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Leaves -->
+                        <path d="M22,30 Q35,25 32,15 Q20,20 22,30" fill="var(--accent-leaf)" />
+                        <path d="M18,20 Q5,15 8,5 Q20,10 18,20" fill="var(--primary-green)" opacity="0.8" />
+                        <!-- Golden Sun -->
+                        <circle cx="20" cy="5" r="4" fill="var(--sun-yellow)" />
+                    </g>
+                    <!-- Text -->
+                    <text x="50" y="32" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" fill="var(--primary-green)">Feijoeiro</text>
+                    <text x="50" y="48" font-family="'Outfit', sans-serif" font-weight="600" font-size="14" fill="var(--accent-leaf)" letter-spacing="1">MÁGICO</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                            Instituição <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-label="Submenu Instituição">
+                            <li><a href="missao.html">Missão</a></li>
+                            <li><a href="horario.html">Horário de Funcionamento</a></li>
+                            <li><a href="sinergias.html">Sinergias</a></li>
+                            <li><a href="regulamento.html">Regulamento Interno</a></li>
+                            <li><a href="contingencia.html">Plano de Contingência</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                    <li><a href="index.html#pais">Área dos Pais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html#contactos" class="btn btn-leaf btn-small" id="header-cta">Agendar Visita</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Menu Móvel" aria-hidden="true">
+        <ul>
+            <li class="nav-item-dropdown-mobile">
+                <button class="dropdown-trigger-mobile" aria-haspopup="true" aria-expanded="false">
+                    Instituição <span class="dropdown-arrow-mobile" aria-hidden="true">▼</span>
+                </button>
+                <ul class="dropdown-menu-mobile" aria-label="Submenu Instituição Móvel">
+                    <li><a href="missao.html">Missão</a></li>
+                    <li><a href="horario.html">Horário de Funcionamento</a></li>
+                    <li><a href="sinergias.html">Sinergias</a></li>
+                    <li><a href="regulamento.html">Regulamento Interno</a></li>
+                    <li><a href="contingencia.html">Plano de Contingência</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#projeto">Projeto Pedagógico</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="comunidade.html">Comunidade</a></li>
+            <li><a href="index.html#pais">Área dos Pais</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="index.html#contactos" class="btn btn-leaf btn-mobile-cta">Agendar Visita</a></li>
+        </ul>
+        <div class="mobile-nav-decor">
+            <svg viewBox="0 0 100 100" class="mobile-decor-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 Q50,40 100,80 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.3"></path>
+                <path d="M0,90 Q50,70 100,90 L100,100 L0,100 Z" fill="var(--mint-light)" opacity="0.5"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="conteudo-principal" style="padding-top: 120px;">
+        <section class="section animate-scroll active" style="padding: 80px 0;">
+            <div class="subpage-container">
+                
+                <!-- Back Button -->
+                <div class="back-nav-container">
+                    <a href="servicos.html" class="btn btn-outline-leaf">
+                        <span class="back-arrow" aria-hidden="true">←</span> Voltar para Serviços
+                    </a>
+                </div>
+
+                <!-- Page Heading -->
+                <div style="margin-bottom: 40px;">
+                    <span class="highlight-badge badge-pink">🍼 Valência Inicial</span>
+                    <h1 class="hero-title" style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-top: 8px; margin-bottom: 16px; line-height: 1.2;">
+                        Creche <span class="highlight">S. Vicente</span>
+                    </h1>
+                </div>
+
+                <!-- Main Content Panel -->
+                <div class="premium-panel">
+                    <p>
+                        A Creche da Associação Feijoeiro Mágico é uma das valências do Infantário S. Vicente, e reflete-se num espaço que foi pensado e organizado para garantir o zelo e a estimulação pedagógica de bebés e crianças com idades compreendidas entre os 4 e os 36 meses.
+                    </p>
+
+                    <!-- Lema Box -->
+                    <div class="lema-quote-box">
+                        <h3>🌱 O lema da nossa Creche é “cuidar”</h3>
+                        <p>
+                            “…pois temos consciência que o futuro se constrói hoje, investindo na entrega sincera do que somos ao que vivemos, com quem vivemos, cuidando o melhor possível das crianças que sorriem a cada dia connosco!”
+                        </p>
+                    </div>
+
+                    <p>
+                        Queremos cativar uma postura positiva e criativa no abraço à vida, garantindo o conforto, a proteção, o carinho e os estímulos necessários a um desenvolvimento holístico feliz. Desenvolvemos atividades que contextualizam as necessidades das nossas crianças com a vontade de dar cor e tempo à imaginação, de forma a pintarmos os dias com fantasia e com a consciência livre para conhecer o Mundo.
+                    </p>
+
+                    <!-- Baby Signs Banner -->
+                    <div class="baby-signs-banner">
+                        <div class="baby-signs-icon" aria-hidden="true">👋</div>
+                        <div class="baby-signs-text">
+                            <h3>Programa Baby Signs® integrado</h3>
+                            <p>
+                                Iniciamos o processo de comunicação com os nossos bebés desenvolvendo o Programa Baby Signs®, com o foco pedagógico numa estimulação quotidiana natural, que contribua para bebés tranquilos, confiantes, autónomos, e capazes de expressarem as suas vontades e os seus sentimentos como base de relacionamento com os adultos e os pares.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2><span>🛡️</span> Acolhimento nos Primeiros Dias (Adaptação)</h2>
+                    <p>
+                        Os primeiros dias na Creche devem ser encarados como um período de “adaptação” a uma realidade distinta e diferente. Por esse motivo, quando são admitidas, as crianças abraçam um programa de acolhimento, definido e acordado entre os pais e a Equipa Técnica do Infantário, que assegura uma integração individual.
+                    </p>
+                    <p style="background: rgba(76, 184, 119, 0.05); padding: 24px; border-radius: 16px; border: 1px solid rgba(76, 184, 119, 0.1); margin-top: 16px; font-weight: 500;">
+                        💡 <strong>Resumindo:</strong> O período de acolhimento serve para cada criança se integrar aos poucos, vivenciando o novo ambiente com serenidade e segurança, de modo a adquirir a confiança necessária para abraçar a nova realidade com entusiasmo, empatia e prazer. Quando se dá o ingresso, o acolhimento é individualizado, de modo a que cada criança se sinta acarinhada e respeitada na sua identidade.
+                    </p>
+                </div>
+
+                <!-- Footer Separator / Quick Contacts Call -->
+                <div style="text-align: center; margin-top: 32px; margin-bottom: 20px;">
+                    <a href="index.html#contactos" class="btn btn-leaf btn-large">💬 Agendar uma Visita à Creche</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-curved-background">
+            <svg class="footer-silhouette-svg" viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,50 Q200,80 400,60 T800,50 T1200,70 T1440,60 L1440,100 L0,100 Z" fill="var(--forest-dark)"/>
+            </svg>
+        </div>
+
+        <div class="container footer-content-container">
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">🌱 Feijoeiro Mágico</div>
+                    <p class="footer-tagline">Uma comunidade acolhedora sob gestão dedicada da Associação Feijoeiro Mágico no histórico Infantário S. Vicente de Alfena. Ajudamos a sonhar e a germinar o saber ecológico.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook" class="social-icon-btn">📘</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="social-icon-btn">📸</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Youtube" class="social-icon-btn">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html#projeto" class="footer-link">Projeto Pedagógico</a></li>
+                        <li><a href="servicos.html" class="footer-link">Serviços</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Ementas da Semana</a></li>
+                        <li><a href="index.html#pais" class="footer-link">Cofre de Documentos</a></li>
+                        <li><a href="contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-legal-col">
+                    <h4>Legislação & Informação</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Políticas de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Política de Cookies</a></li>
+                        <li><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" class="footer-link">Livro de Reclamações</a></li>
+                        <li><a href="#" class="footer-link">Ficha Técnica da Licença</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 Associação Feijoeiro Mágico (Infantário S. Vicente). Todos os direitos reservados.</p>
+                <p class="footer-credit">Desenhado com 💚 para as nossas queridas crianças.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
