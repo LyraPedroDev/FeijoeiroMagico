@@ -34,9 +34,15 @@ FeijoeiroMagico/ (Raiz do Projeto)
 ├── ✉️ Menu: Contactos
 │   └── contactos.html (Formulário de Validação Ativa, Mapa & Info Legal)
 │
-└── 🛠️ Ficheiros Globais de Suporte
-    ├── styles.css (Folha de Estilos CSS3 Premium do Projeto)
-    ├── script.js (Motor de Interatividade e Validações Dinâmicas)
+├── 📂 assets (Pasta de Recursos Globais)
+│   ├── 📂 css/
+│   │   └── styles.css (Folha de Estilos CSS3 Premium do Projeto)
+│   ├── 📂 js/
+│   │   └── script.js (Motor de Interatividade e Validações Dinâmicas)
+│   └── 📂 docs/
+│       ├── Cartaz-A-Escola-Resolve.pdf (Panfletos e Cartazes)
+│       └── Plano-de-Contingencia-Coronavirus.pdf (Planos Oficiais)
+└── 🛠️ Suporte & Guias
     └── SITEMAP.md (Este Guia Organizador)
 ```
 
@@ -104,14 +110,14 @@ FeijoeiroMagico/ (Raiz do Projeto)
 
 ## 🛠️ Detalhes Técnicos Globais
 
-### 1. Folha de Estilos: `styles.css`
+### 1. Folha de Estilos: `assets/css/styles.css`
 Define as cores harmónicas HSL, tipografia premium (`Outfit` para títulos, `Inter` para leitura fluida de parágrafos) e as classes globais do projeto:
 - `--primary-green`: `#34a853` (O tom base natural da marca)
 - `--accent-leaf`: `#4cb877` (O tom ativo de destaque ecológico)
 - `--forest` & `--forest-dark`: Cores profundas para fundos e rodapés institucionais.
 - Efeitos de foco, curvas Bézier dinâmicas para botões `.btn-leaf` e transições de hover.
 
-### 2. Motor Principal: `script.js`
+### 2. Motor Principal: `assets/js/script.js`
 Coordena todas as animações e interatividades dinâmicas de forma leve e otimizada (Vanilla JS):
 - Controle encolhível do cabeçalho ao fazer scroll (`shrink-header`).
 - Abertura e acessibilidade adaptada do menu hambúrguer móvel.
